@@ -35,6 +35,11 @@ Password again: <input type='password' name='password2' value='' />
 Email: <input type='text' name='email' value='<?php echo $email  ?>' />
 <br />
 Homepage: <input type='text' name='homepage' value='<?php echo $homepage  ?>' />
+
+<!--This is a comment. Comments are not displayed in the browser-->
+<!--TODO: poista tuo kotisivu2-->
+
+kotisivu2 : <input type='text' name='homepage' value='<?php echo $homepage  ?>' />
 <br />
 <br />
 
