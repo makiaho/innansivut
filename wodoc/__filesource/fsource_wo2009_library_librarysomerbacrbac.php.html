@@ -1,0 +1,123 @@
+<html>
+<head>
+<title>File Source for rbac.php</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">wo2009</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_wo2009.html" class="menu">class tree: wo2009</a> ]
+		  [ <a href="../elementindex_wo2009.html" class="menu">index: wo2009</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="250" class="menu">
+      <b>Packages:</b><br />
+              <a href="../li_wo2009.html">wo2009</a><br />
+            <br /><br />
+                  
+      
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1 align="center">Source for file rbac.php</h1>
+<p>Documentation is available at <a href="../wo2009/library/_library---some---rbac---rbac.php.html">rbac.php</a></p>
+<div class="src-code">
+<ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">*&nbsp;SomeRbac&nbsp;is&nbsp;authentication&nbsp;class.</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">*</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;wo2009</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;library</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a9"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-doc">*&nbsp;SomeRbac</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-doc">*</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;wo2009</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;library</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-doc">*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a17"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-key">class&nbsp;</span><a href="../wo2009/library/SomeRbac.html">SomeRbac</a>&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a19"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a20"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">private&nbsp;</span><span class="src-var">$maps&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a21"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a22"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a23"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a24"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">protected&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../wo2009/library/SomeRbac.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a25"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//if&nbsp;map&nbsp;is&nbsp;serialized&nbsp;to&nbsp;SOME_CACHE;&nbsp;then&nbsp;use&nbsp;that</span></div></li>
+<li><div class="src-line"><a name="a26"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><a href="http://www.php.net/file_exists">file_exists</a><span class="src-sym">(</span><span class="src-id"><a href="../wo2009/_includes---defines.php.html#defineSOME_CACHE">SOME_CACHE</a></span>.<span class="src-id"><a href="../wo2009/_includes---defines.php.html#defineDS">DS</a></span>.<span class="src-str">'somerbac.serialized'</span><span class="src-sym">))&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a27"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">maps&nbsp;</span>=&nbsp;<a href="http://www.php.net/unserialize">unserialize</a><span class="src-sym">(&nbsp;</span><a href="http://www.php.net/file_get_contents">file_get_contents</a><span class="src-sym">(</span><span class="src-id"><a href="../wo2009/_includes---defines.php.html#defineSOME_CACHE">SOME_CACHE</a></span>.<span class="src-id"><a href="../wo2009/_includes---defines.php.html#defineDS">DS</a></span>.<span class="src-str">'somerbac.serialized'</span><span class="src-sym">)&nbsp;)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a28"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}&nbsp;</span><span class="src-key">else&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a29"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//set&nbsp;defaults&nbsp;to&nbsp;maps</span></div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">maps</span><span class="src-sym">[</span><span class="src-str">'guest'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'read'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a31"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">maps</span><span class="src-sym">[</span><span class="src-str">'registered'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'read'</span><span class="src-sym">,</span><span class="src-str">'write'</span><span class="src-sym">,</span><span class="src-str">'update'</span><span class="src-sym">,</span><span class="src-str">'create'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a32"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">maps</span><span class="src-sym">[</span><span class="src-str">'admin'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<a href="http://www.php.net/array_merge">array_merge</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">maps</span><span class="src-sym">[</span><span class="src-str">'registered'</span><span class="src-sym">]</span><span class="src-sym">,&nbsp;</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'moderate'</span><span class="src-sym">,</span><span class="src-str">'administer'</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a33"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a34"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a35"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a36"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../wo2009/library/SomeRbac.html#methodgetInstance">getInstance</a><span class="src-sym">(</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a37"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">static&nbsp;</span><span class="src-var">$instance</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a38"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-sym">!</span><span class="src-var">$instance</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a39"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$instance&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id">self</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a41"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$instance</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a42"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a43"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a44"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../wo2009/library/SomeRbac.html#method__destruct">__destruct</a><span class="src-sym">(</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a45"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//save&nbsp;and&nbsp;serialize&nbsp;to&nbsp;file</span></div></li>
+<li><div class="src-line"><a name="a46"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$serialized&nbsp;</span>=&nbsp;<a href="http://www.php.net/serialize">serialize</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">maps</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/file_put_contents">file_put_contents</a><span class="src-sym">(</span><span class="src-id"><a href="../wo2009/_includes---defines.php.html#defineSOME_CACHE">SOME_CACHE</a></span>.<span class="src-id"><a href="../wo2009/_includes---defines.php.html#defineDS">DS</a></span>.<span class="src-str">'somerbac.serialized'</span><span class="src-sym">,</span><span class="src-var">$serialized</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a49"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a50"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../wo2009/library/SomeRbac.html#methodaddActions">addActions</a><span class="src-sym">(</span><span class="src-var">$role</span><span class="src-sym">,</span><span class="src-var">$actions&nbsp;</span>=<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">))&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a51"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$map&nbsp;</span>=&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">maps</span><span class="src-sym">[</span><span class="src-var">$role</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a52"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$fullmap&nbsp;</span>=&nbsp;<a href="http://www.php.net/array_unique">array_unique</a><span class="src-sym">(</span><a href="http://www.php.net/array_merge">array_merge</a><span class="src-sym">(</span><span class="src-var">$map</span><span class="src-sym">,</span><span class="src-var">$actions</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a53"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">maps</span><span class="src-sym">[</span><span class="src-var">$role</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-var">$fullmap</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a54"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a55"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a56"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../wo2009/library/SomeRbac.html#methodhasAccess">hasAccess</a><span class="src-sym">(</span><span class="src-var">$role</span><span class="src-sym">,</span><span class="src-var">$action</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a57"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">maps</span><span class="src-sym">[</span><span class="src-var">$role</span><span class="src-sym">]</span><span class="src-sym">))&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a58"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><a href="http://www.php.net/in_array">in_array</a><span class="src-sym">(</span><span class="src-var">$action</span><span class="src-sym">,</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">maps</span><span class="src-sym">[</span><span class="src-var">$role</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a59"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a60"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-id">false</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a61"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a62"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a63"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../wo2009/library/SomeRbac.html#methodremoveActions">removeActions</a><span class="src-sym">(</span><span class="src-var">$role</span><span class="src-sym">,</span><span class="src-var">$remove</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a64"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">maps</span><span class="src-sym">[</span><span class="src-var">$role</span><span class="src-sym">]</span><span class="src-sym">))&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a65"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">maps</span><span class="src-sym">[</span><span class="src-var">$role</span><span class="src-sym">]&nbsp;</span>=&nbsp;<a href="http://www.php.net/array_diff">array_diff</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">maps</span><span class="src-sym">[</span><span class="src-var">$role</span><span class="src-sym">]</span><span class="src-sym">,</span><span class="src-var">$remove</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a66"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a67"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a68"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a69"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a70"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a71"></a><span class="src-sym">}</span></div></li>
+</ol>
+</div>
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Mon, 25 Oct 2010 19:04:02 +0300 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

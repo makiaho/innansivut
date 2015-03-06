@@ -1,0 +1,69 @@
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                    "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd"
+                  >
+<book>
+	<title>Language</title>
+	<titleabbrev>Translations in the wo2009 framework.</titleabbrev>
+	<bookinfo>
+
+		<author>
+			<firstname>Hannu</firstname>
+			<surname>Lohtander</surname>
+		</author>
+	</bookinfo>
+
+	<preface>
+		<title>Foreword</title>
+		<para>
+Internationalization (i18n) is always more than just translating string from one language to another. This framework does not
+ provide any tool to change dates, monetary unit or similar subjects. Most of the techniques used in string translation applies directly to other i18n processes.
+		</para>
+	</preface>
+	<chapter>
+		<title>SomeText_(token)</title>
+		<para>
+SomeText class is the facade having 3 static methods. It is the interface prgrammer uses when translationg 
+strings at the runtime. Its _(TOKEN), sprintf(TOKEN) and prinf(TOKEN) methods use SomeLanguage class in order to find string to the given token.
+		</para>
+		<sect1>
+			<title>Code Example</title>
+			<para>Below there is two template files. First is "normal", using no translation. The second one is using translations.</para>
+			<programlisting role="php"><![CDATA[
+<?php
+echo "Hello World!";
+?>
+
+<?php
+echo SomeText::_('GREETING');
+?>
+
+				]]></programlisting>
+		</sect1>
+	</chapter>
+	<chapter>
+		<title>SomeLanguage</title>
+		<para>
+			SomeLanguage is responsible to load right .ini files based on current language selection.
+		</para>
+		<sect1>
+			<title>Loading language files.</title>
+			<para>Extension developer do not normally load any .ini files or use SomeLanguage directly. FrontController triggers loading site wide language file "fi_FI.site.ini". SomeController in its execute() method load content specific language (like fi_FI.account.ini).</para>
+		</sect1>
+	</chapter>
+	
+	<chapter>
+		<title>INI Files</title>
+		<para>
+Ini files are normal text files in the language/ folder. They have lines having token and translation. Token and translation are separated with character "=".
+		</para>
+		<sect1>
+			<title>Ini file example</title>
+<programlisting role="php"><![CDATA[
+# this is comment line
+#TOKEN=Translation
+GREETING=Hello World!
+]]></programlisting>
+		</sect1>
+	</chapter>
+
+</book>

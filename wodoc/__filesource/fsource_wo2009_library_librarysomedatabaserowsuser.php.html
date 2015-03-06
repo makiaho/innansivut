@@ -1,0 +1,190 @@
+<html>
+<head>
+<title>File Source for user.php</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">wo2009</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_wo2009.html" class="menu">class tree: wo2009</a> ]
+		  [ <a href="../elementindex_wo2009.html" class="menu">index: wo2009</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="250" class="menu">
+      <b>Packages:</b><br />
+              <a href="../li_wo2009.html">wo2009</a><br />
+            <br /><br />
+                  
+      
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1 align="center">Source for file user.php</h1>
+<p>Documentation is available at <a href="../wo2009/library/_library---some---database---rows---user.php.html">user.php</a></p>
+<div class="src-code">
+<ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">*&nbsp;SomeRowUser&nbsp;table.</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">*</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">*&nbsp;&lt;p&gt;example&nbsp;of&nbsp;possible&nbsp;database&nbsp;table&nbsp;from&nbsp;user:</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">*&nbsp;CREATE&nbsp;TABLE&nbsp;someuser&nbsp;(</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;integer&nbsp;NOT&nbsp;NULL,</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;username&nbsp;character&nbsp;varying(32),</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;&quot;password&quot;&nbsp;character(32),</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userrole&nbsp;character(32),</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;email&nbsp;text,</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;homepage&nbsp;text</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-doc">*&nbsp;);</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-doc">*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-doc">*&nbsp;&lt;/p&gt;</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-doc">*&nbsp;&lt;p&gt;Usage&nbsp;examples&nbsp;for&nbsp;create,&nbsp;read,&nbsp;update&nbsp;and&nbsp;delete:</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-doc">*&nbsp;&lt;code&gt;</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-doc">*&nbsp;someloader('some.database.row');</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-doc">*&nbsp;$userrow&nbsp;=&nbsp;SomeRow::getRow('user');</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-doc">*&nbsp;//if&nbsp;you&nbsp;know&nbsp;the&nbsp;id,&nbsp;you&nbsp;can&nbsp;read&nbsp;user&nbsp;row&nbsp;from&nbsp;table&nbsp;someuser</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-doc">*&nbsp;$userrow-&gt;id&nbsp;=&nbsp;1;</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-doc">*&nbsp;$userrow-&gt;read();</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-doc">*&nbsp;echo&nbsp;$userrow-&gt;id;</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-doc">*&nbsp;echo&nbsp;$userrow-&gt;username;</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-doc">*&nbsp;echo&nbsp;$userrow-&gt;password;</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-doc">*&nbsp;echo&nbsp;$userrow-&gt;userrole;</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-doc">*&nbsp;echo&nbsp;$userrow-&gt;email;</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-doc">*&nbsp;echo&nbsp;$userrow-&gt;homepage;</span></div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-doc">*&nbsp;//&nbsp;if&nbsp;you&nbsp;have&nbsp;userrow&nbsp;columns&nbsp;data,&nbsp;and&nbsp;you&nbsp;want&nbsp;to&nbsp;create&nbsp;new&nbsp;user</span></div></li>
+<li><div class="src-line"><a name="a30"></a><span class="src-doc">*&nbsp;$userrow-&gt;id&nbsp;=&nbsp;null;</span></div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-doc">*&nbsp;$userrow-&gt;username&nbsp;=&nbsp;'jaska78';</span></div></li>
+<li><div class="src-line"><a name="a32"></a><span class="src-doc">*&nbsp;$userrow-&gt;password&nbsp;=&nbsp;'sectretpass';</span></div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-doc">*&nbsp;$userrow-&gt;userrole&nbsp;=&nbsp;'registered';</span></div></li>
+<li><div class="src-line"><a name="a34"></a><span class="src-doc">*&nbsp;$userrow-&gt;email&nbsp;=&nbsp;'jaska@example.org';</span></div></li>
+<li><div class="src-line"><a name="a35"></a><span class="src-doc">*&nbsp;$userrow-&gt;homepage&nbsp;=&nbsp;null;</span></div></li>
+<li><div class="src-line"><a name="a36"></a><span class="src-doc">*&nbsp;$userrow-&gt;create();</span></div></li>
+<li><div class="src-line"><a name="a37"></a><span class="src-doc">*&nbsp;//if&nbsp;you&nbsp;want&nbsp;to&nbsp;update,&nbsp;you&nbsp;must&nbsp;set&nbsp;id&nbsp;and&nbsp;call&nbsp;update</span></div></li>
+<li><div class="src-line"><a name="a38"></a><span class="src-doc">*&nbsp;//same&nbsp;than&nbsp;create,&nbsp;but</span></div></li>
+<li><div class="src-line"><a name="a39"></a><span class="src-doc">*&nbsp;$userrow-&gt;id&nbsp;=&nbsp;1;</span></div></li>
+<li><div class="src-line"><a name="a40"></a><span class="src-doc">*&nbsp;$userrow-&gt;update();</span></div></li>
+<li><div class="src-line"><a name="a41"></a><span class="src-doc">*&nbsp;//to&nbsp;delete,&nbsp;you&nbsp;just&nbsp;need&nbsp;id&nbsp;and&nbsp;then&nbsp;call&nbsp;delete()</span></div></li>
+<li><div class="src-line"><a name="a42"></a><span class="src-doc">*&nbsp;$userrow-&gt;id&nbsp;=&nbsp;1;</span></div></li>
+<li><div class="src-line"><a name="a43"></a><span class="src-doc">*&nbsp;$userrow-&gt;delete;</span></div></li>
+<li><div class="src-line"><a name="a44"></a><span class="src-doc">*&nbsp;&lt;/code&gt;</span></div></li>
+<li><div class="src-line"><a name="a45"></a><span class="src-doc">*&nbsp;&lt;/p&gt;</span></div></li>
+<li><div class="src-line"><a name="a46"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;wo2009</span></div></li>
+<li><div class="src-line"><a name="a47"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;library</span></div></li>
+<li><div class="src-line"><a name="a48"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a49"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a50"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a51"></a><span class="src-doc">*&nbsp;Template&nbsp;class&nbsp;SomeRow-User.</span></div></li>
+<li><div class="src-line"><a name="a52"></a><span class="src-doc">*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a53"></a><span class="src-doc">*&nbsp;&lt;p&gt;example&nbsp;of&nbsp;possible&nbsp;database&nbsp;table&nbsp;for&nbsp;user:</span></div></li>
+<li><div class="src-line"><a name="a54"></a><span class="src-doc">*&nbsp;CREATE&nbsp;TABLE&nbsp;wo2009_someuser&nbsp;(</span></div></li>
+<li><div class="src-line"><a name="a55"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;integer&nbsp;NOT&nbsp;NULL,</span></div></li>
+<li><div class="src-line"><a name="a56"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;username&nbsp;character&nbsp;varying(32),</span></div></li>
+<li><div class="src-line"><a name="a57"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;&quot;password&quot;&nbsp;character(32),</span></div></li>
+<li><div class="src-line"><a name="a58"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userrole&nbsp;character(32),</span></div></li>
+<li><div class="src-line"><a name="a59"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;email&nbsp;text,</span></div></li>
+<li><div class="src-line"><a name="a60"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;homepage&nbsp;text</span></div></li>
+<li><div class="src-line"><a name="a61"></a><span class="src-doc">*&nbsp;);</span></div></li>
+<li><div class="src-line"><a name="a62"></a><span class="src-doc">*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a63"></a><span class="src-doc">*&nbsp;&lt;/p&gt;</span></div></li>
+<li><div class="src-line"><a name="a64"></a><span class="src-doc">*&nbsp;&lt;p&gt;Usage&nbsp;examples&nbsp;for&nbsp;create,&nbsp;read,&nbsp;update&nbsp;and&nbsp;delete:</span></div></li>
+<li><div class="src-line"><a name="a65"></a><span class="src-doc">*&nbsp;&lt;code&gt;</span></div></li>
+<li><div class="src-line"><a name="a66"></a><span class="src-doc">*&nbsp;someloader('some.database.row');</span></div></li>
+<li><div class="src-line"><a name="a67"></a><span class="src-doc">*&nbsp;$userrow&nbsp;=&nbsp;SomeRow::getRow('user');</span></div></li>
+<li><div class="src-line"><a name="a68"></a><span class="src-doc">*&nbsp;//if&nbsp;you&nbsp;know&nbsp;the&nbsp;id,&nbsp;you&nbsp;can&nbsp;read&nbsp;user&nbsp;row&nbsp;from&nbsp;table&nbsp;someuser</span></div></li>
+<li><div class="src-line"><a name="a69"></a><span class="src-doc">*&nbsp;$userrow-&gt;id&nbsp;=&nbsp;1;</span></div></li>
+<li><div class="src-line"><a name="a70"></a><span class="src-doc">*&nbsp;$userrow-&gt;read();</span></div></li>
+<li><div class="src-line"><a name="a71"></a><span class="src-doc">*&nbsp;echo&nbsp;$userrow-&gt;id;</span></div></li>
+<li><div class="src-line"><a name="a72"></a><span class="src-doc">*&nbsp;echo&nbsp;$userrow-&gt;username;</span></div></li>
+<li><div class="src-line"><a name="a73"></a><span class="src-doc">*&nbsp;echo&nbsp;$userrow-&gt;password;</span></div></li>
+<li><div class="src-line"><a name="a74"></a><span class="src-doc">*&nbsp;echo&nbsp;$userrow-&gt;userrole;</span></div></li>
+<li><div class="src-line"><a name="a75"></a><span class="src-doc">*&nbsp;echo&nbsp;$userrow-&gt;email;</span></div></li>
+<li><div class="src-line"><a name="a76"></a><span class="src-doc">*&nbsp;echo&nbsp;$userrow-&gt;homepage;</span></div></li>
+<li><div class="src-line"><a name="a77"></a><span class="src-doc">*&nbsp;//&nbsp;if&nbsp;you&nbsp;have&nbsp;userrow&nbsp;columns&nbsp;data,&nbsp;and&nbsp;you&nbsp;want&nbsp;to&nbsp;create&nbsp;new&nbsp;user</span></div></li>
+<li><div class="src-line"><a name="a78"></a><span class="src-doc">*&nbsp;$userrow-&gt;id&nbsp;=&nbsp;null;</span></div></li>
+<li><div class="src-line"><a name="a79"></a><span class="src-doc">*&nbsp;$userrow-&gt;username&nbsp;=&nbsp;'jaska78';</span></div></li>
+<li><div class="src-line"><a name="a80"></a><span class="src-doc">*&nbsp;$userrow-&gt;password&nbsp;=&nbsp;'sectretpass';</span></div></li>
+<li><div class="src-line"><a name="a81"></a><span class="src-doc">*&nbsp;$userrow-&gt;userrole&nbsp;=&nbsp;'registered';</span></div></li>
+<li><div class="src-line"><a name="a82"></a><span class="src-doc">*&nbsp;$userrow-&gt;email&nbsp;=&nbsp;'jaska@example.org';</span></div></li>
+<li><div class="src-line"><a name="a83"></a><span class="src-doc">*&nbsp;$userrow-&gt;homepage&nbsp;=&nbsp;null;</span></div></li>
+<li><div class="src-line"><a name="a84"></a><span class="src-doc">*&nbsp;$userrow-&gt;create();</span></div></li>
+<li><div class="src-line"><a name="a85"></a><span class="src-doc">*&nbsp;//if&nbsp;you&nbsp;want&nbsp;to&nbsp;update,&nbsp;you&nbsp;must&nbsp;set&nbsp;id&nbsp;and&nbsp;call&nbsp;update</span></div></li>
+<li><div class="src-line"><a name="a86"></a><span class="src-doc">*&nbsp;//same&nbsp;than&nbsp;create,&nbsp;but</span></div></li>
+<li><div class="src-line"><a name="a87"></a><span class="src-doc">*&nbsp;$userrow-&gt;id&nbsp;=&nbsp;1;</span></div></li>
+<li><div class="src-line"><a name="a88"></a><span class="src-doc">*&nbsp;$userrow-&gt;update();</span></div></li>
+<li><div class="src-line"><a name="a89"></a><span class="src-doc">*&nbsp;//to&nbsp;delete,&nbsp;you&nbsp;just&nbsp;need&nbsp;id&nbsp;and&nbsp;then&nbsp;call&nbsp;delete()</span></div></li>
+<li><div class="src-line"><a name="a90"></a><span class="src-doc">*&nbsp;$userrow-&gt;id&nbsp;=&nbsp;1;</span></div></li>
+<li><div class="src-line"><a name="a91"></a><span class="src-doc">*&nbsp;$userrow-&gt;delete;</span></div></li>
+<li><div class="src-line"><a name="a92"></a><span class="src-doc">*&nbsp;&lt;/code&gt;</span></div></li>
+<li><div class="src-line"><a name="a93"></a><span class="src-doc">*&nbsp;&lt;/p&gt;</span></div></li>
+<li><div class="src-line"><a name="a94"></a><span class="src-doc">*</span></div></li>
+<li><div class="src-line"><a name="a95"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;wo2009</span></div></li>
+<li><div class="src-line"><a name="a96"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;library</span></div></li>
+<li><div class="src-line"><a name="a97"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a98"></a><span class="src-key">class&nbsp;</span><a href="../wo2009/library/SomeRowUser.html">SomeRowUser</a>&nbsp;<span class="src-key">extends&nbsp;</span><a href="../wo2009/library/SomeRow.html">SomeRow</a>&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a99"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a100"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><a href="../wo2009/library/SomeRowUser.html#var$table">$table</a>&nbsp;=&nbsp;<span class="src-str">'someuser'</span><span class="src-sym">;&nbsp;</span><span class="src-comm">//change&nbsp;name&nbsp;if&nbsp;you&nbsp;use&nbsp;some&nbsp;other&nbsp;table&nbsp;name</span></div></li>
+<li><div class="src-line"><a name="a101"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><a href="../wo2009/library/SomeRowUser.html#var$primary">$primary</a>&nbsp;=&nbsp;<span class="src-str">'id'</span><span class="src-sym">;&nbsp;</span><span class="src-comm">//change&nbsp;primary&nbsp;key&nbsp;column,&nbsp;if&nbsp;you&nbsp;use&nbsp;something&nbsp;else</span></div></li>
+<li><div class="src-line"><a name="a102"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><a href="../wo2009/library/SomeRowUser.html#var$columns">$columns</a>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span></div></li>
+<li><div class="src-line"><a name="a103"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'id'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a104"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'username'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a105"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'password'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a106"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'userrole'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a107"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'email'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a108"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'homepage'</span></div></li>
+<li><div class="src-line"><a name="a109"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a110"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a111"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><a href="../wo2009/library/SomeRowUser.html#var$id">$id</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="src-id">null</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a112"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><a href="../wo2009/library/SomeRowUser.html#var$username">$username</a>&nbsp;=&nbsp;<span class="src-id">null</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a113"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><a href="../wo2009/library/SomeRowUser.html#var$password">$password</a>&nbsp;=&nbsp;<span class="src-id">null</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a114"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><a href="../wo2009/library/SomeRowUser.html#var$userrole">$userrole</a>&nbsp;=&nbsp;<span class="src-str">'guest'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a115"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><a href="../wo2009/library/SomeRowUser.html#var$email">$email</a>&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="src-id">null</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a116"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><a href="../wo2009/library/SomeRowUser.html#var$homepage">$homepage</a>&nbsp;=&nbsp;<span class="src-id">null</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a117"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a118"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../wo2009/library/SomeRowUser.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a119"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">parent</span><span class="src-sym">::</span><a href="../wo2009/library/SomeRow.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a120"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a121"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a122"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../wo2009/library/SomeRowUser.html#methodgetColumns">getColumns</a><span class="src-sym">(</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a123"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../wo2009/library/SomeRowUser.html#var$columns">columns</a><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a124"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a125"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a126"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../wo2009/library/SomeRowUser.html#methodgetTable">getTable</a><span class="src-sym">(</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a127"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../wo2009/library/SomeRowUser.html#var$table">table</a><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a128"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a129"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a130"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../wo2009/library/SomeRowUser.html#methodgetPrimary">getPrimary</a><span class="src-sym">(</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a131"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../wo2009/library/SomeRowUser.html#var$primary">primary</a><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a132"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a133"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a134"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../wo2009/library/SomeRowUser.html#methodcheck">check</a><span class="src-sym">(</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a135"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-id">true</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a136"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a137"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a138"></a><span class="src-sym">}</span></div></li>
+</ol>
+</div>
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Mon, 25 Oct 2010 19:04:04 +0300 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,421 @@
+<refentry id="{@id}">
+	<refnamediv>
+		<refname>Tutorial about using wo2009 mvc</refname>
+		<refpurpose>This tutorial explains how to use wo2009 mvc to extend
+			your own content. This tutorial is final, as MVC does not evolve over
+			time.</refpurpose>
+	</refnamediv>
+	<refsynopsisdiv>
+		<author>
+			Hannu Lohtander
+			<authorblurb>
+				{@link mailto:hannu.lohtander@uta.fi hannu.lohtander@uta.fi}
+         </authorblurb>
+		</author>
+	</refsynopsisdiv>
+	<refsect1 id="{@id intro}">
+		<title>About the MVC</title>
+		<para>
+			MVC model is basic rendering model, that separates control flow,
+			application data handling and presentation to separate classes.
+		</para>
+		<para>Control flow is handled by Controller. Control flow means the
+			decision making, that guides the part of the content that is
+			rendered. If the content is forum application, the possible choices
+			are: listing forum areas, listing topics in an area, single topic,
+			etc. It is up to Controller to know, what model and view it is going
+			to use with a request.
+        </para>
+		<para>
+			Model is place for the data warehouse and data logic. In our forum application, it
+			would handle fetching data from database, and does what ever is
+			needed to do, before it can be received by the view.
+        </para>
+		<para>
+			View is the display, the xhtml generator of the three. It gets Model as
+			its helper, and it gets all the data from it. This is the only place,
+			where html code is generated. And also only place where output
+			functions (echo, print, sprintf, ...) are used!
+        </para>
+		<para>
+			Execution flow in mvc model is: Controller is executed. It fetches some
+			parameter from request (usually 'view'), and knows what Model to get
+			- it gets it. It then asks model to do any processing model wants to do.
+			When model is ready, Controller creates View. It gives Model to View and
+			asks View to diplay content. What ever content is echoed, gets
+			buffered by Front Controller inside its dispatch method.
+        </para>
+
+	</refsect1>
+	<refsect1 id="{@id naming}">
+		<title>Naming Rules</title>
+		<para>SomeController implements few methods, that can be used to control 
+			flow and load Model and View. Rules for methods and parameters are:
+		</para>
+		<para>
+			Controller extending from SomeController, must have display method.
+			If there is view parameter in url, then corresponding method is
+			called. If view is view=start, calling execute will call start.
+			</para>
+			<para>
+			Calling from controller getModel('default') means, that model must be
+			in file model/default.php AND its name must be SomeModelDefault.
+			</para>
+			<para>
+			Calling from controller getView('default') means, that view must be
+			in file view/default/default.php and its name must be
+			SomeViewDefault
+			</para>
+			<para>
+			Template name given to SomeView::display must be file in folder tmpl/. 
+			Usually this display($tmpl) is called from extending class SomeViewSuffix.
+			</para>
+	</refsect1>
+	
+	<refsect1 id="{@id example2}">
+		<title>An walkthrough example Hello World mvc module.</title>
+		<para>
+			This is step by step guide to create Hello World mvc module skeleton classes.
+   </para>
+		<para>
+			For simplest possible framework you need to do 1 Controller, 1 Model,
+			1 View and 1 template file. You need also 1 content bootstrap. This
+			example is content 'hello'. It has 2 views. Files are:
+			</para>
+			<blockquote><para>
+				content/hello/hello.php - the bootstrap, initiates controller
+				<simpara></simpara>
+				content/hello/controller/hello.php - the controller
+				SomeControllerHello, initiates model and view
+				<simpara></simpara>
+				content/model/hello.php - the model SomeModelHello
+				<simpara></simpara>
+				content/hello/view/default/default.php - the view SomeViewDefault
+				<simpara></simpara>
+				content/hello/view/default/tmpl/default.php
+				<simpara></simpara>
+				content/hello/view/date/date.php - the view SomeViewDate
+				<simpara></simpara>
+				content/hello/view/date/tmpl/default.php
+				<simpara></simpara>
+			</para></blockquote>
+		<refsect2 id="{@id hellobootstrap}">
+			<title>Hello World bootstrap.</title>
+			<para>
+				Hello world bootstrap creates controller. The name of the controller
+				file and Controller class name can be freely selected. It is good
+				convention to name controller with name like SomeControllerDefault
+				or with content name - SomeControllerHello. What ever the name is,
+				controller(s) are placed to subfolder controller/.
+			</para>
+			<example><![CDATA[
+content/hello/hello.php - the bootstrap
+content/hello/controller/hello.php - the controller SomeControllerHello		
+			]]></example>
+			<para>
+				Controller must extend frameworks baseclass SomeController 
+				some.application.controller, because SomeController implements
+				execute(), getModel and getView methods. Those are then available at
+				the extending controller. Code to create and execute
+				SomeControllerHello is:
+				<programlisting role="php">
+//this file is content/hello/hello.php
+include(CONTENT_PATH.DS.'controller'.DS.'hello.php');
+$controller = SomeControllerHello();
+$controller->execute();
+				</programlisting>
+			</para>
+			<para>Nothing more is needed to start executing mvc module code.
+					CONTENT_PATH is one example of constants that are available in wo2009 as to be
+					used in code in the extensions.
+			</para>
+		
+		</refsect2>
+
+		<refsect2 id="{@id hellocontroller}">
+			<title>Hello World Controller</title>
+			<para>
+				Hello world controller is named - name can be freely selected -
+				SomeControllerHello. Some Controller must have at least one method,
+				public function display(); Controller must extend from
+				SomeController.
+				<programlisting role="php">
+someloader('some.application.controller');
+class SomeControllerHello extends SomeController {}
+				</programlisting>
+				If controller has constructor, it must have the same definition as
+				ISomeController:
+				<example><![CDATA[
+//interface ISomeController
+public function __construct();
+				]]></example>
+				Although it is not mandatory, it is good policy to call
+				parent::__construct() from exending class, to allow parent to
+				construct itself:
+				<example><![CDATA[
+public function __construct() { parent::__construct(); }
+				]]></example>
+			</para>
+			<para>Extensions Controller can and usually have more methods than
+				mandatory display. These are named after parameter "view" expected to be in the url. Hello world
+				example have showdate() method. This methods is called by
+				SomeController, when http URL has view=showdate parameter.
+			</para>
+		</refsect2>
+
+		<refsect2 id="{@id hellomodel}">
+			<title>Hello World Model.</title>
+			<para>
+				Hello world model is named so, that it starts with SomeModel, and
+				has suffix that comes from SomeController->getModel(name); name
+				-argument value is the suffix. Callind $controller->getView('hello') tries to find
+				from folder content/hello/model the file content/hello/model/hello.php class named
+				SomeModelHello.
+				<programlisting role="php">
+//controller method display()
+public function display() {
+$model = $this->getModel('hello');
+}				</programlisting>
+				If model has constructor (, it does not have to have one,) it must
+				have the same definition as ISomeModel:
+				<example><![CDATA[
+//interface ISomeModel
+public function __construct(array $options = array());
+				]]></example>
+				Although it is not mandatory, it is good policy to call
+				parent::__construct() from exending class, to allow parent to
+				construct itself:
+<example><![CDATA[
+public function __construct(array $options=array() ) {
+	parent::__construct($options); 
+}
+]]></example>
+			</para>
+			<para>There are no rules for how to use model. There can not be such rules, because that is
+			always extension specific. SomeModelHello has two
+				methods, getHello() ja getDate(). One model serves both our views.
+			</para>
+		</refsect2>
+
+		<refsect2 id="{@id helloview}">
+			<title>Hello World View.</title>
+			<para>
+				Hello world view is named so, that it starts with SomeView, and has
+				suffix that comes from SomeController->getView(name) name
+				-argument. Callind $controller->getView('default') will try to find
+				from folder content/hello/view/default file content/hello/view/default/default.php, having class
+				named SomeViewDefault. Each view is in its own subfolder, view
+				SomeViewDate, fetched using SomeController->getView('date'), must be
+				in file content/hello/view/date/date.php.
+				<programlisting role="php">
+//controller method display()
+public function display() {
+	$model = $this->getModel('hello');
+	$model = $this->getView('default');
+}
+
+//controller method showdate()
+public function showdate() {
+	$model = $this->getModel('hello');
+	$model = $this->getView('date');
+}
+				</programlisting>
+				If view has constructor, it does not have to have one, it must have
+				the same definition as ISomeView:
+				<example><![CDATA[
+//interface ISomeView
+public function __construct(array $options = array());
+				]]></example>
+				Although it is not mandatory, it is good policy to call
+				parent::__construct() from exending class, to allow parent to
+				construct itself:
+				<programlisting role='php'>
+public function __construct(array $options=array() ) {
+	parent::__construct($options); 
+}
+				</programlisting>
+			</para>
+			<para>
+				There are no rules for how to use model. SomeViewDate and
+				SomeViewDefault has only one method -display(). Controller calls it
+				after it has joined View with Model:
+				<programlisting role='php'>
+//controller method showdate()
+public function showdate() {
+	$model = $this->getModel('hello');
+	$model = $this->getView('date');
+	$view->setModel($model);
+	$view->display();
+}
+				</programlisting>
+			</para>
+			<para>Reason for joining model with view is, that model is the only
+				source for data, that view uses. It does not get data from
+				request, post, files or session directly, everything is fetched and
+				prepared by the model.</para>
+			<para>View first get data from model, and then uses parent class
+				SomeView to get html template file to generate final xhtml from data. Parent SomeView
+				will do this, and tries to find template form folder
+				view/default/tmpl or /view/data/tmpl, which ever is currently used.
+				Template name is default.php or it can be given as parameter to
+				parent::display($tmpl) method. Method parent::display($tmpl) MUST be
+				called from view, or no xhtml is generated.</para>
+			<programlisting role='php'>
+//SomeViewDate or SomeViewDefault method display(tmpl='default')
+public function display($tmpl=null) {
+	$model = $this->getModel();
+	$this->hello = $model->getHello();
+	parent::display($tmpl);
+}
+			</programlisting>
+			<para>SomeView::display($tmpl) includes template file, which output
+				html. Template can have if, while, for, foreach and other function
+				calls, conditionals or looping structures, but it must not have eg.
+				function declarations. That is bad practise.</para>
+		</refsect2>
+
+		<refsect2 id="{@id hellolisting}">
+			<title>Full Hello World code listing</title>
+			<cmdsynopsis><![CDATA[
+------
+<?php
+//this is content/hello/hello.php
+include(PATH_CONTENT.DS.'controller'.DS.'hello.php');
+$controller = new SomeControllerHello();
+$controller->execute();
+?>
+------
+//this is file content/hello/controller/hello.php
+<?php
+someloader('some.application.controller');
+
+class SomeControllerHello extends SomeController {
+
+	public function __construct() {
+		parent::__construct();
+	}
+	
+	public function display() {
+		$model = $this->getModel('default');
+		$view = $this->getView('default');
+		$view->setModel($model);
+		$view->display();
+	}
+	
+	public function showdate() {
+		$model = $this->getModel('default');
+		$view = $this->getView('date');
+		$view->setModel($model);
+		$view->display();
+	}
+}
+?>
+------
+//this is only model, SomeModelDefault /content/hello/model/default.php
+<?php
+someloader('some.application.model');
+
+class SomeModelDefault extends SomeModel {
+
+	public function __construct(array $options=array()) {
+		parent::__construct($options);
+	}
+	
+	public function getHello() {
+		return "Hello";
+	}
+	
+	public function getDate() {
+		return date('d.m.Y',time());
+	}
+
+}
+?>
+------
+//the first from two views, content/hello/view/default/default.php
+<?php
+someloader('some.application.view');
+
+class SomeViewDefault extends SomeView {
+
+	public function display($tmpl=null) {
+		$model = $this->getModel();
+		$this->hello = $model->getHello();
+		parent::display();
+	}
+
+}
+?>
+
+------
+
+//template of the default view. content/hello/view/default/tmpl/default.php
+<?php
+echo $this->hello;
+?>
+<hr>
+<a href='index.php?app=hello&view=showdate'>see date</a>
+------
+//second from the two views, content/hello/view/date/date.php
+
+<?php
+someloader('some.application.view');
+
+class SomeViewDate extends SomeView {
+
+	public function display($tmpl=null) {
+		$model = $this->getModel();
+		$this->date = $model->getDate();
+		parent::display();
+	}
+
+}
+?>
+------
+//template of the date view content/hello/view/date/tmpl/default.php
+
+<?php
+echo $this->date;
+?>
+<hr>
+<a href='index.php?app=hello'>see hello</a>
+
+]]>
+			</cmdsynopsis>
+		</refsect2>
+
+	</refsect1>
+	<refsect1 id="{@id helpings}">
+		<title>Services</title>
+		<para>MVC model gets contants and objects from framework. You can find
+			all of those in documentation, but here a some examples.</para>
+		<example><![CDATA[
+These constants are defined in includes/defines.php
+
+SOME_PATH - the absolute path to index.php folder, the root of the framework
+SOME_LIBRARY - SOME_PATH's subfolder library.
+SOME_CONTENT - path to content/ folder.
+
+PATH_CONTENT - defined in SomeApplication->dispatch to be absolutepath of dispatch'ed content
+			
+These classes are used in contents.
+
+$session = SomeFactory::getSession;
+$session->set('colors', array('red','blue'));
+$colors = $session->get('colors',array());
+
+$safe_int = SomeRequest::getInt('x');
+$safe_float = SomeRequest::getFloat('x');
+$safe_string = SomeRequest::getString('x');
+$safe_string2 = SomeRequest::getVar('x','default');
+$safe_alphanumeric = SomeRequest::getCmd('x','default');
+
+$application = SomeRequest::getApplication(); //the SomeApplication instance
+$application->redirect('index.php?app=login'); //redirects browser to url
+
+$conf = SomeApplication::getConfiguration();
+$session_handler = $conf->get('session_handler','session');
+		]]></example>
+	</refsect1>
+
+</refentry>

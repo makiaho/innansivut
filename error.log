@@ -1,0 +1,54 @@
+[06-Mar-2015 17:22:23 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 40
+[06-Mar-2015 17:22:23 Europe/Berlin] PHP Stack trace:
+[06-Mar-2015 17:22:23 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\omanelamaniluoja\index.php:0
+[06-Mar-2015 17:22:23 Europe/Berlin] PHP   2. SomeApplication->dispatch() C:\xampp\htdocs\omanelamaniluoja\index.php:54
+[06-Mar-2015 17:22:23 Europe/Berlin] PHP   3. require() C:\xampp\htdocs\omanelamaniluoja\library\some\application\application.php:95
+[06-Mar-2015 17:22:23 Europe/Berlin] PHP   4. SomeController->execute() C:\xampp\htdocs\omanelamaniluoja\content\account\account.php:20
+[06-Mar-2015 17:22:23 Europe/Berlin] PHP   5. SomeControllerDefault->register() C:\xampp\htdocs\omanelamaniluoja\library\some\application\controller.php:43
+[06-Mar-2015 17:22:23 Europe/Berlin] PHP   6. SomeViewRegister->display() C:\xampp\htdocs\omanelamaniluoja\content\account\controller\default.php:73
+[06-Mar-2015 17:22:23 Europe/Berlin] PHP   7. SomeView->display() C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\register.php:29
+[06-Mar-2015 17:22:23 Europe/Berlin] PHP   8. SomeView->loadTemplate() C:\xampp\htdocs\omanelamaniluoja\library\some\application\view.php:40
+[06-Mar-2015 17:22:23 Europe/Berlin] PHP   9. include() C:\xampp\htdocs\omanelamaniluoja\library\some\application\view.php:55
+[06-Mar-2015 17:22:45 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 40
+[06-Mar-2015 17:22:45 Europe/Berlin] PHP Stack trace:
+[06-Mar-2015 17:22:45 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\omanelamaniluoja\index.php:0
+[06-Mar-2015 17:22:45 Europe/Berlin] PHP   2. SomeApplication->dispatch() C:\xampp\htdocs\omanelamaniluoja\index.php:54
+[06-Mar-2015 17:22:45 Europe/Berlin] PHP   3. require() C:\xampp\htdocs\omanelamaniluoja\library\some\application\application.php:95
+[06-Mar-2015 17:22:45 Europe/Berlin] PHP   4. SomeController->execute() C:\xampp\htdocs\omanelamaniluoja\content\account\account.php:20
+[06-Mar-2015 17:22:45 Europe/Berlin] PHP   5. SomeControllerDefault->register() C:\xampp\htdocs\omanelamaniluoja\library\some\application\controller.php:43
+[06-Mar-2015 17:22:45 Europe/Berlin] PHP   6. SomeViewRegister->display() C:\xampp\htdocs\omanelamaniluoja\content\account\controller\default.php:73
+[06-Mar-2015 17:22:45 Europe/Berlin] PHP   7. SomeView->display() C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\register.php:29
+[06-Mar-2015 17:22:45 Europe/Berlin] PHP   8. SomeView->loadTemplate() C:\xampp\htdocs\omanelamaniluoja\library\some\application\view.php:40
+[06-Mar-2015 17:22:45 Europe/Berlin] PHP   9. include() C:\xampp\htdocs\omanelamaniluoja\library\some\application\view.php:55
+[06-Mar-2015 17:22:57 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 40
+[06-Mar-2015 17:22:57 Europe/Berlin] PHP Stack trace:
+[06-Mar-2015 17:22:57 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\omanelamaniluoja\index.php:0
+[06-Mar-2015 17:22:57 Europe/Berlin] PHP   2. SomeApplication->dispatch() C:\xampp\htdocs\omanelamaniluoja\index.php:54
+[06-Mar-2015 17:22:57 Europe/Berlin] PHP   3. require() C:\xampp\htdocs\omanelamaniluoja\library\some\application\application.php:95
+[06-Mar-2015 17:22:57 Europe/Berlin] PHP   4. SomeController->execute() C:\xampp\htdocs\omanelamaniluoja\content\account\account.php:20
+[06-Mar-2015 17:22:57 Europe/Berlin] PHP   5. SomeControllerDefault->register() C:\xampp\htdocs\omanelamaniluoja\library\some\application\controller.php:43
+[06-Mar-2015 17:22:57 Europe/Berlin] PHP   6. SomeViewRegister->display() C:\xampp\htdocs\omanelamaniluoja\content\account\controller\default.php:73
+[06-Mar-2015 17:22:57 Europe/Berlin] PHP   7. SomeView->display() C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\register.php:29
+[06-Mar-2015 17:22:57 Europe/Berlin] PHP   8. SomeView->loadTemplate() C:\xampp\htdocs\omanelamaniluoja\library\some\application\view.php:40
+[06-Mar-2015 17:22:57 Europe/Berlin] PHP   9. include() C:\xampp\htdocs\omanelamaniluoja\library\some\application\view.php:55
+[06-Mar-2015 17:25:45 Europe/Berlin] PHP Fatal error:  Call to a member function fetchAll() on boolean in C:\xampp\htdocs\omanelamaniluoja\content\quotes\classes\quotes.php on line 15
+[06-Mar-2015 17:25:45 Europe/Berlin] PHP Stack trace:
+[06-Mar-2015 17:25:45 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\omanelamaniluoja\index.php:0
+[06-Mar-2015 17:25:45 Europe/Berlin] PHP   2. SomeApplication->dispatch() C:\xampp\htdocs\omanelamaniluoja\index.php:54
+[06-Mar-2015 17:25:45 Europe/Berlin] PHP   3. require() C:\xampp\htdocs\omanelamaniluoja\library\some\application\application.php:95
+[06-Mar-2015 17:25:45 Europe/Berlin] PHP   4. SomeController->execute() C:\xampp\htdocs\omanelamaniluoja\content\quotes\quotes.php:50
+[06-Mar-2015 17:25:45 Europe/Berlin] PHP   5. SomeControllerQuote->display() C:\xampp\htdocs\omanelamaniluoja\library\some\application\controller.php:45
+[06-Mar-2015 17:25:45 Europe/Berlin] PHP   6. SomeControllerQuote->quotes() C:\xampp\htdocs\omanelamaniluoja\content\quotes\controller.php:11
+[06-Mar-2015 17:25:45 Europe/Berlin] PHP   7. SomeController->getModel() C:\xampp\htdocs\omanelamaniluoja\content\quotes\controller.php:85
+[06-Mar-2015 17:25:45 Europe/Berlin] PHP   8. SomeModelQuotes->__construct() C:\xampp\htdocs\omanelamaniluoja\library\some\application\controller.php:76
+[06-Mar-2015 17:25:45 Europe/Berlin] PHP   9. SomeModelQuotes->load() C:\xampp\htdocs\omanelamaniluoja\content\quotes\model\quotes.php:10
+[06-Mar-2015 17:25:45 Europe/Berlin] PHP  10. Quotes->__construct() C:\xampp\htdocs\omanelamaniluoja\content\quotes\model\quotes.php:14
+[06-Mar-2015 17:25:45 Europe/Berlin] PHP  11. Quotes->load() C:\xampp\htdocs\omanelamaniluoja\content\quotes\classes\quotes.php:8
+[06-Mar-2015 17:27:27 Europe/Berlin] PHP Warning:  require(C:\xampp\htdocs\omanelamaniluoja\content\register\register.php): failed to open stream: No such file or directory in C:\xampp\htdocs\omanelamaniluoja\library\some\application\application.php on line 95
+[06-Mar-2015 17:27:27 Europe/Berlin] PHP Stack trace:
+[06-Mar-2015 17:27:27 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\omanelamaniluoja\index.php:0
+[06-Mar-2015 17:27:27 Europe/Berlin] PHP   2. SomeApplication->dispatch() C:\xampp\htdocs\omanelamaniluoja\index.php:54
+[06-Mar-2015 17:27:27 Europe/Berlin] PHP Fatal error:  require(): Failed opening required 'C:\xampp\htdocs\omanelamaniluoja\content\register\register.php' (include_path='.;C:\xampp\php\PEAR') in C:\xampp\htdocs\omanelamaniluoja\library\some\application\application.php on line 95
+[06-Mar-2015 17:27:27 Europe/Berlin] PHP Stack trace:
+[06-Mar-2015 17:27:27 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\omanelamaniluoja\index.php:0
+[06-Mar-2015 17:27:27 Europe/Berlin] PHP   2. SomeApplication->dispatch() C:\xampp\htdocs\omanelamaniluoja\index.php:54

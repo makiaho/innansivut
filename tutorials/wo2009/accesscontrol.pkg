@@ -1,0 +1,38 @@
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                    "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd"
+                  >
+<book>
+	<title>Access Control</title>
+	<titleabbrev>RBAC in wo2009.</titleabbrev>
+	<bookinfo>
+
+		<author>
+			<firstname>Hannu</firstname>
+			<surname>Lohtander</surname>
+		</author>
+	</bookinfo>
+
+	<preface>
+		<title>About the Access Control</title>
+		<para>
+This tutorial explains how to do access control in wo2009 course framework. 
+		This is very limited tutorial, as access control itself is explained duting the wo-course.
+		</para>
+	</preface>
+	<chapter>
+		<title>SomeAuth_(user, action)</title>
+		<para>
+RBAC has two classes. One is facade class SomeAuth, the other one is implementing
+			full behavior, SomeRbac.
+		</para>
+		<sect1>
+			<title>Code Example</title>
+			<para>There is only example on how to check priviledges. The way the roles and actions are set to rbac, is not explained.</para>
+			<programlisting role="php"><![CDATA[
+if (!SomeAuth::_(SomeFactory::getUser(),'play')) {
+	throw new SomeException('unauthorized');
+}
+		]]></programlisting>
+		</sect1>
+	</chapter>
+</book>

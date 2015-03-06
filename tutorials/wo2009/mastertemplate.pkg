@@ -1,0 +1,136 @@
+<refentry id="{@id}">
+	<refnamediv>
+		<refname>Mastertemplate</refname>
+		<refpurpose>This tutorial explains how to make master template to
+			wo2009 course framework. This is technical presentation, the issues
+			on html+css+typography is with no interest here.</refpurpose>
+	</refnamediv>
+	<refsynopsisdiv>
+		<author>
+			Hannu Lohtander
+			<authorblurb>
+				{@link mailto:hannu.lohtander@uta.fi hannu.lohtander@uta.fi}
+         </authorblurb>
+		</author>
+	</refsynopsisdiv>
+	<refsect1 id="{@id mastertemplate}">
+		<title>About the Master Template</title>
+		<para>
+			Master template is technique where Document class and xhtml file work
+			together in order to create final html page. In some frameworks there
+			is several different types of documents: xhtml, pdf, xml and even
+			more. Wo2009 template has only one document type, html. Document
+			class is in library/some/document/documenthtml.php. {@link
+			ISomeDocumentHTML}.
+		</para>
+		<para>
+			Document class renders final page {@link ISomeDocumentHTML::render()}.
+			Rendering in this context is a) reading master template from
+			template/ folder and b) replacing tags with pre-created and buffered
+			html.
+		</para>
+	</refsect1>
+	<refsect1 id="{@id templatetechnical}">
+		<title>Technical details</title>
+		<para>
+			All the master templates are located to folder template/, which is
+			defined in constant SOME_THEMES. Template file is plain php file,
+			that has whole html code starting with DOCTYPE {@link
+			http://en.wikipedia.org/wiki/Document_Type_Declaration} declaration.
+			Default template file is
+			<inlineequation>template/default/index.php</inlineequation>.
+			Other templates change the path, filename is always index.php. So
+			template "red" - index.php?app=example&amp;template=red - would
+			assume file
+			<inlineequation>template/red/index.php</inlineequation>
+			.
+		</para>
+		<para>There is also template element in the configuration -file, which overrides default template, named "default". See your
+		configuration file for the element and its current value.</para>
+		<para>
+			There is currently only one tag that needs to be placed to template file:
+			&lt;some:content /&gt;. NOTE the space between content and end of tag!
+</para>
+		<para>
+			<warning>
+				The tag is replaced using str_replace, not regexp, so it must be
+				written exactly like explained - from character to character.
+			</warning>
+		</para>
+		<para>
+			Content is dispatched before any master template rendering takes
+			place. It is therefor possible to change template from content
+			execution. Template is changed through Front Controller, not directly
+			to document.
+			<programlisting><![CDATA[
+		$app = SomeFactory::getApplication();
+		$app->setTemplate('red'); // template/red/index.php
+		]]></programlisting>
+		</para>
+		<refsect2 id="{@id development}">
+			<title>Further tags</title>
+			<para>
+				It is possible to create new tags to template. That requires, that
+				programmer can:
+				<itemizedlist>
+					<listitem>Set the xhtml that will be replaced, to document.
+					</listitem>
+					<listitem>Change logic in renderer to handle this new tag.
+					</listitem>
+					<listitem>Put to mastertempate new tag.</listitem>
+				</itemizedlist>
+			</para>
+			<para>It is trivial to introduce new tempate tags, just decide what
+				you want to use. Lets say for html page title, use tag:
+				&lt;some:title /&gt;. The other two modifications are simple, but
+				need code changes to SomeDocumentHTML</para>
+			<para>If you need to put new data to SomeDocumentHTML, new method is
+				needed. public function setData($tag, $xhtml) is good choice. That
+				method would put to SomeDocumentHTML's internal member array $buffer
+				with key $tag the string $xhtml. The render() method would need to
+				find all the new tags with content to be replaced. Example of
+				current and proposed new versions are below.</para>
+			<para>
+				<programlisting><![CDATA[
+	//current SomeDocumentHTML::render();
+	public function render() {
+		//get template, get content from buffer, replace placeholder with content.
+		//return xhtml string
+		$template = $this->loadMasterTemplate();
+		$xhtml = str_replace('<some:content />',$this->buffer['content'],$template);
+		return $xhtml;
+	}  
+	]]></programlisting>
+				<programlisting><![CDATA[
+	//new render
+	public function render() {
+		$data = $this->loadMasterTemplate();	
+		$replace = array();
+		$matches = array();
+		if(preg_match_all('#<some:([\w]+) (.*)\/>#iU', $data, $matches))
+		{
+			$matches[0] = array_reverse($matches[0]);
+			$matches[1] = array_reverse($matches[1]);
+			$matches[2] = array_reverse($matches[2]);
+
+			$count = count($matches[1]);
+
+			for($i = 0; $i < $count; $i++)
+			{
+				
+				$name  = $matches[1][$i];
+				$replace[$i] = $this->buffer[$name];
+			}
+
+			$data = str_replace($matches[0], $replace, $data);
+		}
+		return $data;
+	}
+	]]></programlisting>
+
+			</para>
+		</refsect2>
+
+	</refsect1>
+
+</refentry>

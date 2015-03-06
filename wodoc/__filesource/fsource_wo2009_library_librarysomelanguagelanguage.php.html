@@ -1,0 +1,131 @@
+<html>
+<head>
+<title>File Source for language.php</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">wo2009</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_wo2009.html" class="menu">class tree: wo2009</a> ]
+		  [ <a href="../elementindex_wo2009.html" class="menu">index: wo2009</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="250" class="menu">
+      <b>Packages:</b><br />
+              <a href="../li_wo2009.html">wo2009</a><br />
+            <br /><br />
+                  
+      
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1 align="center">Source for file language.php</h1>
+<p>Documentation is available at <a href="../wo2009/library/_library---some---language---language.php.html">language.php</a></p>
+<div class="src-code">
+<ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">*&nbsp;SomeLanguage&nbsp;class&nbsp;is&nbsp;storage&nbsp;for&nbsp;language&nbsp;tokens.</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">*</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;wo2009</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;library</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-id"><a href="../wo2009/SomeLoader.html">SomeLoader</a></span><span class="src-sym">::</span><a href="../wo2009/SomeLoader.html#methodimport">import</a><span class="src-sym">(</span><span class="src-str">'library.some.language.ilanguage'</span><span class="src-sym">,&nbsp;</span><span class="src-id"><a href="../wo2009/_index.php.html#defineSOME_PATH">SOME_PATH</a></span>.<span class="src-id"><a href="../wo2009/_includes---defines.php.html#defineDS">DS</a></span>.<span class="src-str">'interface'</span><span class="src-sym">,</span><span class="src-id">null</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-doc">*&nbsp;SomeLanguage</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-doc">*</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;wo2009</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;library</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-doc">*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-key">class&nbsp;</span><a href="../wo2009/library/SomeLanguage.html">SomeLanguage</a>&nbsp;<span class="src-key">implements&nbsp;</span><span class="src-id">ISomeLanguage&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a18"></a>&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a19"></a>&nbsp;&nbsp;<span class="src-key">private&nbsp;</span><span class="src-var">$language</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a20"></a>&nbsp;&nbsp;<span class="src-key">private&nbsp;</span><span class="src-var">$strings&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a21"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a22"></a>&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../wo2009/library/SomeLanguage.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-var">$language</span>=<span class="src-str">'en_GB'</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a23"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">language&nbsp;</span>=&nbsp;<span class="src-var">$language</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a24"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../wo2009/library/SomeLanguage.html#methodload">load</a><span class="src-sym">(</span><span class="src-str">'site'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a25"></a>&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a26"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a27"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;default&nbsp;language&nbsp;translation&nbsp;function.</span></div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-doc">&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a30"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$str&nbsp;</span><span class="src-doc">token</span></div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">boolean&nbsp;</span><span class="src-doc-var">$jssafe&nbsp;</span><span class="src-doc">javascript&nbsp;safe</span></div></li>
+<li><div class="src-line"><a name="a32"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">text</span></div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-doc">&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a34"></a>&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../wo2009/library/SomeLanguage.html#method_">_</a><span class="src-sym">(</span><span class="src-var">$str</span><span class="src-sym">,</span><span class="src-var">$jssafe</span>=<span class="src-id">false</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a35"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">strings</span><span class="src-sym">[</span><span class="src-var">$str</span><span class="src-sym">]</span><span class="src-sym">))&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a36"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">strings</span><span class="src-sym">[</span><span class="src-var">$str</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a37"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}&nbsp;</span><span class="src-key">else&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a38"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$str</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a39"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a40"></a>&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a41"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a42"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$token&nbsp;</span><span class="src-doc">language&nbsp;token</span></div></li>
+<li><div class="src-line"><a name="a43"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">translated&nbsp;token</span></div></li>
+<li><div class="src-line"><a name="a44"></a><span class="src-doc">&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a45"></a>&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../wo2009/library/SomeLanguage.html#methodget">get</a><span class="src-sym">(</span><span class="src-var">$token</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a46"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../wo2009/library/SomeLanguage.html#method_">_</a><span class="src-sym">(</span><span class="src-var">$token</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a49"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;set&nbsp;new&nbsp;language&nbsp;token&nbsp;and&nbsp;override&nbsp;old&nbsp;if&nbsp;there&nbsp;is&nbsp;one.</span></div></li>
+<li><div class="src-line"><a name="a50"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$token&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a51"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$value&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a52"></a><span class="src-doc">&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a53"></a>&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../wo2009/library/SomeLanguage.html#methodset">set</a><span class="src-sym">(</span><span class="src-var">$token</span><span class="src-sym">,</span><span class="src-var">$value</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a54"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">strings</span><span class="src-sym">[</span><span class="src-var">$token</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-var">$value</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a55"></a>&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a56"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a57"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;load&nbsp;new&nbsp;language&nbsp;file&nbsp;to&nbsp;translation&nbsp;table.</span></div></li>
+<li><div class="src-line"><a name="a58"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$file&nbsp;</span><span class="src-doc">part&nbsp;of&nbsp;the&nbsp;.ini&nbsp;file&nbsp;that&nbsp;defines&nbsp;file.</span></div></li>
+<li><div class="src-line"><a name="a59"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">boolean&nbsp;</span><span class="src-doc">true&nbsp;if&nbsp;file&nbsp;was&nbsp;found&nbsp;and&nbsp;loaded</span></div></li>
+<li><div class="src-line"><a name="a60"></a><span class="src-doc">&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a61"></a>&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../wo2009/library/SomeLanguage.html#methodload">load</a><span class="src-sym">(</span><span class="src-var">$file</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a62"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$filename&nbsp;</span>=&nbsp;<span class="src-id"><a href="../wo2009/_includes---defines.php.html#defineSOME_LANGUAGE">SOME_LANGUAGE</a></span>.<span class="src-id"><a href="../wo2009/_includes---defines.php.html#defineDS">DS</a></span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">language</span>.<span class="src-id"><a href="../wo2009/_includes---defines.php.html#defineDS">DS</a></span>.<span class="src-var">$file</span>.<span class="src-str">'.'</span>.&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">language</span>.<span class="src-str">'.ini'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a63"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-sym">!</span><a href="http://www.php.net/file_exists">file_exists</a><span class="src-sym">(</span><span class="src-var">$filename</span><span class="src-sym">))&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a64"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//echo&nbsp;&quot;file_exists($filename)&lt;br&nbsp;/&gt;\n&quot;;</span></div></li>
+<li><div class="src-line"><a name="a65"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a66"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a67"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//content&nbsp;as&nbsp;array,&nbsp;file()</span></div></li>
+<li><div class="src-line"><a name="a68"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$lines&nbsp;</span>=&nbsp;<a href="http://www.php.net/file">file</a><span class="src-sym">(</span><span class="src-var">$filename</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a69"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//each&nbsp;line&nbsp;that&nbsp;does&nbsp;not&nbsp;start&nbsp;with&nbsp;#&nbsp;and&nbsp;has&nbsp;=&nbsp;is&nbsp;plitted&nbsp;to&nbsp;two,&nbsp;to&nbsp;get&nbsp;token&nbsp;and&nbsp;string</span></div></li>
+<li><div class="src-line"><a name="a70"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">foreach</span><span class="src-sym">(</span><span class="src-var">$lines&nbsp;</span><span class="src-key">as&nbsp;</span><span class="src-var">$line</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a71"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-var">$line&nbsp;</span>&amp;&amp;&nbsp;<span class="src-var">$line</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]&nbsp;</span>!=&nbsp;<span class="src-str">'#'&nbsp;</span>&amp;&amp;&nbsp;<span class="src-var">$line</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]&nbsp;</span>!=&nbsp;<span class="src-str">'/'&nbsp;</span>&amp;&amp;&nbsp;<a href="http://www.php.net/strpos">strpos</a><span class="src-sym">(</span><span class="src-var">$line</span><span class="src-sym">,</span><span class="src-str">'='</span><span class="src-sym">)&nbsp;)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a72"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$parts&nbsp;</span>=&nbsp;<a href="http://www.php.net/explode">explode</a><span class="src-sym">(</span><span class="src-str">'='</span><span class="src-sym">,</span><span class="src-var">$line</span><span class="src-sym">,</span><span class="src-num">2</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a73"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">strings</span><span class="src-sym">[</span><span class="src-var">$parts</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]]&nbsp;</span>=&nbsp;<span class="src-var">$parts</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a74"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a75"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a76"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-id">true</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a77"></a>&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a78"></a>&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a79"></a><span class="src-sym">}</span></div></li>
+</ol>
+</div>
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Mon, 25 Oct 2010 19:04:01 +0300 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

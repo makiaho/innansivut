@@ -1,0 +1,125 @@
+<html>
+<head>
+<title>File Source for iconfiguration.php</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">wo2009</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_wo2009.html" class="menu">class tree: wo2009</a> ]
+		  [ <a href="../elementindex_wo2009.html" class="menu">index: wo2009</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="250" class="menu">
+      <b>Packages:</b><br />
+              <a href="../li_wo2009.html">wo2009</a><br />
+            <br /><br />
+                  
+      
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1 align="center">Source for file iconfiguration.php</h1>
+<p>Documentation is available at <a href="../wo2009/library/_interface---library---some---configuration---iconfiguration.php.html">iconfiguration.php</a></p>
+<div class="src-code">
+<ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">*&nbsp;SomeConfiguration&nbsp;serves&nbsp;as&nbsp;wrapper&nbsp;class&nbsp;aroung&nbsp;configuration.xml.</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">*</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;Hannu&nbsp;Lohtander</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;wo2009</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;library</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a9"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-doc">*&nbsp;SomeConfiguration&nbsp;serves&nbsp;as&nbsp;wrapper&nbsp;class&nbsp;aroung&nbsp;configuration.xml.</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-doc">*</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-doc">*&nbsp;&lt;p&gt;It&nbsp;would&nbsp;be&nbsp;difficult&nbsp;to&nbsp;every&nbsp;time&nbsp;use&nbsp;xml&nbsp;apis&nbsp;to&nbsp;get&nbsp;values&nbsp;from&nbsp;Configuration.</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-doc">*&nbsp;That&nbsp;is&nbsp;why&nbsp;this&nbsp;class&nbsp;provides&nbsp;easy&nbsp;api&nbsp;to&nbsp;configuration&nbsp;data.</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-doc">*&nbsp;Class&nbsp;is&nbsp;used&nbsp;through&nbsp;SomeFactory.</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-doc">*&nbsp;&lt;/p&gt;</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-doc">*&nbsp;&lt;p&gt;</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-doc">*&nbsp;Usage&nbsp;example,&nbsp;get&nbsp;database&nbsp;settings.</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-doc">*&nbsp;&lt;code&gt;</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-doc">*&nbsp;$conf&nbsp;=&nbsp;SomeFactory::getConfiguration();</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-doc">*&nbsp;$database_host&nbsp;=&nbsp;$conf-&gt;get('databasehost','database');</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-doc">*&nbsp;$database_name&nbsp;=&nbsp;$conf-&gt;get('database','database');</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-doc">*&nbsp;$database_dbuser&nbsp;=&nbsp;$conf-&gt;get('dbuser','database');</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-doc">*&nbsp;$database_dbpass&nbsp;=&nbsp;$conf-&gt;get('dbpass','database');</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-doc">*&nbsp;&lt;/code&gt;</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-doc">*&nbsp;&lt;/p&gt;</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-doc">*</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;Hannu&nbsp;Lohtander</span></div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;wo2009</span></div></li>
+<li><div class="src-line"><a name="a30"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;library</span></div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-doc">*</span></div></li>
+<li><div class="src-line"><a name="a32"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-key">interface&nbsp;</span><a href="../wo2009/library/ISomeConfiguration.html">ISomeConfiguration</a>&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a34"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a35"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a36"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;singleton&nbsp;to&nbsp;get&nbsp;instance.</span></div></li>
+<li><div class="src-line"><a name="a37"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$file&nbsp;</span><span class="src-doc">fullpath&nbsp;to&nbsp;file&nbsp;that&nbsp;has&nbsp;conf.&nbsp;Usually&nbsp;SOME_PATH.DS.'configuration.xml'.</span></div></li>
+<li><div class="src-line"><a name="a38"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">ISomeConfiguration&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a39"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a40"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">static&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../wo2009/library/ISomeConfiguration.html#methodgetInstance">getInstance</a><span class="src-sym">(</span><span class="src-var">$file</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a41"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a42"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a43"></a><span class="src-doc">&nbsp;*&nbsp;Method&nbsp;to&nbsp;load&nbsp;configuration.&nbsp;Usually&nbsp;called&nbsp;from&nbsp;constructor.</span></div></li>
+<li><div class="src-line"><a name="a44"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$file&nbsp;</span><span class="src-doc">fullpath&nbsp;to&nbsp;file&nbsp;that&nbsp;has&nbsp;conf.&nbsp;Usually&nbsp;SOME_PATH.DS.'configuration.xml'.</span></div></li>
+<li><div class="src-line"><a name="a45"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">boolean&nbsp;</span><span class="src-doc">true&nbsp;if&nbsp;file&nbsp;was&nbsp;found</span></div></li>
+<li><div class="src-line"><a name="a46"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../wo2009/library/ISomeConfiguration.html#methodload">load</a><span class="src-sym">(</span><span class="src-var">$file</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a49"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a50"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Method&nbsp;to&nbsp;save&nbsp;configuration&nbsp;to&nbsp;file.</span></div></li>
+<li><div class="src-line"><a name="a51"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$file&nbsp;</span><span class="src-doc">full&nbsp;path&nbsp;to&nbsp;file</span></div></li>
+<li><div class="src-line"><a name="a52"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">void&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a53"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a54"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../wo2009/library/ISomeConfiguration.html#methodsave">save</a><span class="src-sym">(</span><span class="src-var">$file</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a55"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a56"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Fetch&nbsp;single&nbsp;configuration&nbsp;value.</span></div></li>
+<li><div class="src-line"><a name="a57"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$key&nbsp;</span><span class="src-doc">the&nbsp;key&nbsp;inside&nbsp;configuration&nbsp;group.</span></div></li>
+<li><div class="src-line"><a name="a58"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$group&nbsp;</span><span class="src-doc">name&nbsp;of&nbsp;the&nbsp;group&nbsp;of&nbsp;the&nbsp;key.</span></div></li>
+<li><div class="src-line"><a name="a59"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">value&nbsp;of&nbsp;the&nbsp;configuration&nbsp;or&nbsp;boolean&nbsp;false&nbsp;if&nbsp;nto&nbsp;found</span></div></li>
+<li><div class="src-line"><a name="a60"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a61"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a62"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../wo2009/library/ISomeConfiguration.html#methodget">get</a><span class="src-sym">(</span><span class="src-var">$key</span><span class="src-sym">,</span><span class="src-var">$group</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a63"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a64"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Method&nbsp;to&nbsp;add&nbsp;new&nbsp;configuration&nbsp;value&nbsp;or&nbsp;replace&nbsp;existing&nbsp;one.</span></div></li>
+<li><div class="src-line"><a name="a65"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">$key&nbsp;</span><span class="src-doc">name&nbsp;if&nbsp;the&nbsp;key&nbsp;inside&nbsp;conf&nbsp;group</span></div></li>
+<li><div class="src-line"><a name="a66"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">$groups&nbsp;</span><span class="src-doc">name&nbsp;of&nbsp;the&nbsp;group.&nbsp;Default&nbsp;is&nbsp;common.</span></div></li>
+<li><div class="src-line"><a name="a67"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$value&nbsp;</span><span class="src-doc">value&nbsp;of&nbsp;the&nbsp;setting</span></div></li>
+<li><div class="src-line"><a name="a68"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">boolean&nbsp;</span><span class="src-doc">false&nbsp;if&nbsp;fails,&nbsp;string&nbsp;old&nbsp;value&nbsp;if&nbsp;value&nbsp;is&nbsp;replaved</span></div></li>
+<li><div class="src-line"><a name="a69"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a70"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a71"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../wo2009/library/ISomeConfiguration.html#methodset">set</a><span class="src-sym">(</span><span class="src-var">$key</span><span class="src-sym">,</span><span class="src-var">$group</span><span class="src-sym">,</span><span class="src-var">$value</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a72"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a73"></a><span class="src-sym">}</span></div></li>
+</ol>
+</div>
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Mon, 25 Oct 2010 19:03:59 +0300 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+HOWTO Install course framework.
+--------------------------------------------------------------------------------
+
+Week3 framework does not need any installing at all. From week4 you need some 
+installation things done. Those are explained below. The configuration does 
+not change, so form week4 to following weeks the configuration is the same.
+
+NOTICE:
+Week 5 and after that frameworks do not have configuration.php file in them. 
+You copy that from the week 4 framework, after creating and filling 
+the data to it. Database does not change so you can use the same database.
+
+
+There are three things to do to fully install framework.
+
+1) You need configuration.php file. week 4 framework opened with browser 
+tell this to you at the default frontpage:
+
+"Can not find configuration file /var/www/fwweek4/configuration.php
+Rename from the root folder the file configuration.mysql.php OR 
+configuration.postgre.php as configuration.php"
+
+2) You need to create database and put its configuration to the 
+configuration.php
+
+3) You need two tables created to the database.
+
+--------------------------------------------------------------------------------
+
+1) Creating configuration.php file
+
+There are to files in the root folder of the week4_framework.zip. 
+One is for the mysql database, the other for the postgre database.
+
+Choose the one you need and copy or rename it to 
+root folder as configuration.php.
+
+Now when you open http://localhost or uta-http address to framework, you see 
+message in red that asks you to read help to install database.
+
+
+2) YOU NEED TO CREATE DATABASE.
+
+With uta postgre, you alredy have one, read 
+database_instructions.txt how to create user there.
+
+With XAMPP you have in your computer PhpMyAdmin installed at 
+localhost/phpmyadmin. Use that to create database.
+Xampp mysql has user root with empty password. No need to change that.
+
+AFTER YOU HAVE CREATED DATABASE or created postgre user with password:
+
+Put database configuration values to configuration.php
+
+There is two ways to do this. Open it with text editor and fill the section
+'database' => 'FILL HERE',
+'dbuser' => 'FILL HERE',
+'dbpass' => 'FILL HERE',
+
+The other way is to open link index.php?app=configuration and fill the form and
+save.
+
+With XAMPP dbuser is root, dbpass is empty string and database is the name you 
+used when creating one. With postgre you need correct host, user and password.
+
+See index.php?app=configuration&cntr=install for more instructions if needed.
+
+3)
+
+Database tables someuser and somesession
+
+After you have created database and configuration.php has all the 
+database settings, the link
+
+index.php?app=configuration&cntr=install
+
+opens a view, where you have to Action links in the bottom of the page. Click
+ these links and tables are installed by the framework for you.
+
+If you want to install those tables manually, the CREATE sql commands are found 
+at the page:
+
+index.php?app=helpindex.php?app=help
+
+--------------------------------------------------------------------------------
+
+Example of my configuration.php file for the mysql in XAMPP is following:
+
+<?php
+    defined('SOME_PATH') or die('Unauthorized access');
+    $configuration = array (
+  'common' => 
+  array (
+    'livesite' => '',
+    'language' => 'fi_FI',
+    'secret' => 'safsf543fyg43hydrth',
+    'template' => 'default',
+  ),
+  'session' => 
+  array (
+    'lifetime' => '45',
+    'session_handler' => 'file',
+    'session_table' => 'somesession',
+  ),
+  'database' => 
+  array (
+    'databasedriver' => 'pdomysql',
+    'databasehost' => '127.0.0.1',
+    'database' => 'fwweek4',
+    'dbuser' => 'root',
+    'dbpass' => '',
+  ),
+  'debug' => 
+  array (
+    'debug' => '0',
+    'debugfile' => 'debug.log',
+  ),
+);
+
+Database created for the example is named fwweek4.
+
+--------------------------------------------------------------------------------
+
+Remember to copy configuration.php to any other installation you may create
+with frameworks for weeks 5 and later. That is all you need to do after these 
+3 steps.
+
+
+--------------------------------------------------------------------------------
+SQL for the mysql database
+
+CREATE TABLE IF NOT EXISTS `somesession` (
+  `sesskey` char(32) NOT NULL,
+  `expiry` int(11) NOT NULL,
+  `value` text
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci
+
+
+CREATE TABLE IF NOT EXISTS `someuser` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `username` varchar(32) DEFAULT NULL,
+  `password` char(32) DEFAULT NULL,
+  `userrole` char(32) DEFAULT NULL,
+  `email` text,
+  `homepage` text,
+  UNIQUE KEY `id` (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=1
+--------------------------------------------------------------------------------
+SQL for the postgre database
+
+CREATE TABLE somesession (
+    sesskey character(32) NOT NULL,
+    expiry integer NOT NULL,
+    value text
+)
+
+CREATE TABLE someuser (
+   id SERIAL,
+   username character varying(32),
+   "password" character(32),
+ userrole character(32),
+   email text,
+   homepage text
+	)
+

@@ -1,0 +1,134 @@
+<html>
+<head>
+<title>File Source for istorage.php</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">wo2009</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_wo2009.html" class="menu">class tree: wo2009</a> ]
+		  [ <a href="../elementindex_wo2009.html" class="menu">index: wo2009</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="250" class="menu">
+      <b>Packages:</b><br />
+              <a href="../li_wo2009.html">wo2009</a><br />
+            <br /><br />
+                  
+      
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1 align="center">Source for file istorage.php</h1>
+<p>Documentation is available at <a href="../wo2009/library/_interface---library---some---session---istorage.php.html">istorage.php</a></p>
+<div class="src-code">
+<ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;wo2009</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;library</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a6"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;wo2009</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;library</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a11"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-key">interface&nbsp;</span><a href="../wo2009/library/ISomeSessionStorage.html">ISomeSessionStorage</a>&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a13"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a14"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a15"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;this&nbsp;is&nbsp;factory&nbsp;method.&nbsp;Using&nbsp;the&nbsp;driver,&nbsp;the&nbsp;correct&nbsp;handler&nbsp;class&nbsp;for&nbsp;session&nbsp;storage&nbsp;should&nbsp;be&nbsp;fetched.</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;then&nbsp;that&nbsp;class&nbsp;is&nbsp;given&nbsp;with&nbsp;correct&nbsp;methods&nbsp;to&nbsp;session_set_save_handler&nbsp;calllback&nbsp;parameters.</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$driver&nbsp;</span><span class="src-doc">'file'&nbsp;or&nbsp;'database'</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">array&nbsp;</span><span class="src-doc-var">$options&nbsp;</span><span class="src-doc">some&nbsp;additional&nbsp;options,&nbsp;if&nbsp;needed,&nbsp;to&nbsp;storage&nbsp;class&nbsp;cosntructor.</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">ISessionStorage&nbsp;</span><span class="src-doc">implementation</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a22"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">static&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../wo2009/library/ISomeSessionStorage.html#methodgetInstance">getInstance</a><span class="src-sym">(</span><span class="src-var">$driver&nbsp;</span>=&nbsp;<span class="src-str">'none'</span><span class="src-sym">,&nbsp;</span><span class="src-var">$options&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a23"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a24"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$save_path,&nbsp;</span><span class="src-doc">that&nbsp;is&nbsp;obsolete&nbsp;if&nbsp;file&nbsp;is&nbsp;not&nbsp;used.</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$session_name&nbsp;</span><span class="src-doc">ususally&nbsp;if&nbsp;not&nbsp;overriden,&nbsp;PHPSESSID.&nbsp;Is&nbsp;used&nbsp;as&nbsp;cookie&nbsp;name.</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">true&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a29"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../wo2009/library/ISomeSessionStorage.html#methodopen">open</a><span class="src-sym">(</span><span class="src-var">$save_path</span><span class="src-sym">,&nbsp;</span><span class="src-var">$session_name</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a31"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a32"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">true&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a34"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a35"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../wo2009/library/ISomeSessionStorage.html#methodclose">close</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a36"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a37"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$key&nbsp;</span><span class="src-doc">session&nbsp;id</span></div></li>
+<li><div class="src-line"><a name="a38"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">type,&nbsp;even&nbsp;if&nbsp;it&nbsp;is&nbsp;just&nbsp;empty&nbsp;string&nbsp;-&nbsp;&quot;&quot;.</span></div></li>
+<li><div class="src-line"><a name="a39"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a40"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../wo2009/library/ISomeSessionStorage.html#methodread">read</a><span class="src-sym">(</span><span class="src-var">$key</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a41"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a42"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$key&nbsp;</span><span class="src-doc">session&nbsp;id</span></div></li>
+<li><div class="src-line"><a name="a43"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$value&nbsp;</span><span class="src-doc">session&nbsp;serialized&nbsp;string</span></div></li>
+<li><div class="src-line"><a name="a44"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">boolean&nbsp;</span><span class="src-doc">true&nbsp;of&nbsp;false</span></div></li>
+<li><div class="src-line"><a name="a45"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a46"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../wo2009/library/ISomeSessionStorage.html#methodwrite">write</a><span class="src-sym">(</span><span class="src-var">$key</span><span class="src-sym">,&nbsp;</span><span class="src-var">$value</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a48"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a49"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">true&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a50"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a51"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../wo2009/library/ISomeSessionStorage.html#methoddestroy">destroy</a><span class="src-sym">(</span><span class="src-var">$id</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a52"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a53"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a54"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">true&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a55"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a56"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../wo2009/library/ISomeSessionStorage.html#methodgc">gc</a><span class="src-sym">(</span><span class="src-var">$maxlifetime</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a57"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a58"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a59"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Register&nbsp;the&nbsp;functions&nbsp;of&nbsp;this&nbsp;class&nbsp;with&nbsp;PHP's&nbsp;session&nbsp;handler</span></div></li>
+<li><div class="src-line"><a name="a60"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a61"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@access</span><span class="src-doc">&nbsp;public</span></div></li>
+<li><div class="src-line"><a name="a62"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">array&nbsp;</span><span class="src-doc-var">$options&nbsp;</span><span class="src-doc">optional&nbsp;parameters</span></div></li>
+<li><div class="src-line"><a name="a63"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a64"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../wo2009/library/ISomeSessionStorage.html#methodregister">register</a><span class="src-sym">(&nbsp;</span><span class="src-var">$options&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)&nbsp;)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a65"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a66"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">#this&nbsp;is&nbsp;given&nbsp;here&nbsp;on&nbsp;purpose,&nbsp;to&nbsp;show&nbsp;where&nbsp;the&nbsp;session&nbsp;handlers&nbsp;are&nbsp;set.</span></div></li>
+<li><div class="src-line"><a name="a67"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">#&nbsp;class&nbsp;register&nbsp;from&nbsp;__construct</span></div></li>
+<li><div class="src-line"><a name="a68"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">#function&nbsp;register(&nbsp;$options&nbsp;=&nbsp;array()&nbsp;)</span></div></li>
+<li><div class="src-line"><a name="a69"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">#{</span></div></li>
+<li><div class="src-line"><a name="a70"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">#&nbsp;&nbsp;&nbsp;//&nbsp;use&nbsp;this&nbsp;object&nbsp;as&nbsp;the&nbsp;session&nbsp;handler</span></div></li>
+<li><div class="src-line"><a name="a71"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">#&nbsp;&nbsp;&nbsp;session_set_save_handler(</span></div></li>
+<li><div class="src-line"><a name="a72"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array($this,&nbsp;'open'),</span></div></li>
+<li><div class="src-line"><a name="a73"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array($this,&nbsp;'close'),</span></div></li>
+<li><div class="src-line"><a name="a74"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array($this,&nbsp;'read'),</span></div></li>
+<li><div class="src-line"><a name="a75"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array($this,&nbsp;'write'),</span></div></li>
+<li><div class="src-line"><a name="a76"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array($this,&nbsp;'destroy'),</span></div></li>
+<li><div class="src-line"><a name="a77"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array($this,&nbsp;'gc')</span></div></li>
+<li><div class="src-line"><a name="a78"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">#&nbsp;&nbsp;&nbsp;);</span></div></li>
+<li><div class="src-line"><a name="a79"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">#}</span></div></li>
+<li><div class="src-line"><a name="a80"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a81"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a82"></a><span class="src-sym">}</span></div></li>
+</ol>
+</div>
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Mon, 25 Oct 2010 19:04:00 +0300 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

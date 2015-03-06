@@ -1,0 +1,69 @@
+<refentry id="{@id}">
+	<refnamediv>
+		<refname>Somerow</refname>
+		<refpurpose>This tutorial explains how to make active record pattern
+			based somerowXXX class.</refpurpose>
+	</refnamediv>
+	<refsynopsisdiv>
+		<author>
+			Hannu Lohtander
+			<authorblurb>
+				{@link mailto:hannu.lohtander@uta.fi hannu.lohtander@uta.fi}
+         </authorblurb>
+		</author>
+	</refsynopsisdiv>
+	<refsect1 id="{@id somerow}">
+		<title>About the Active Record and SomeRow</title>
+		<para>
+Active Record is Software Pattern that defines way to implement 4 basic SQL queries as a class. That 
+class in wo2009 framework is SomeRow. Class is in library/some/database/row/row.php. {@link ISomeRow}.
+		</para>
+		<para>
+SomeRow implements base methods for create, read, update and delete operations (CRUD). Programmer making 
+new table to database, must create extending class and implement 3 required methods.
+		</para>
+		<para>
+		There is pdf explaining this process in details: http://www.cs.uta.fi/wo/wo2010/pub/pdf
+		</para>
+	</refsect1>
+	<refsect1 id="{@id somerowtechnical}">
+		<title>Programming details</title>
+		<para>
+Creating Active Record for table "demo" having column id and data is explained step by step.
+		</para>
+		
+		<itemizedlist>
+			<listitem>
+				<para>Create new file "demo.php" to: library/some/database/rows/demo.php</para>
+			</listitem>
+			<listitem>
+				<para>create class SomeRowDemo extends SomeRow to file demo.php</para>
+			</listitem>
+			<listitem>
+				<para>Implement methods getColumns(), getTable() and getPrimary()</para>
+			</listitem>
+			<listitem>
+				<para>getColumns() must return column names.</para>
+			</listitem>
+			<listitem>
+				<para>getTable() must return table name</para>
+			</listitem>
+			<listitem>
+				<para>getPrimary() must return primary key name, the one with SERIAL datatype.</para>
+			</listitem>
+		</itemizedlist>
+
+		<para>
+		Usage Example:
+		<programlisting><![CDATA[
+$demorow = SomeRow::getRow('demo');
+$newid = $demorow->create();
+$demorow->read();
+$demorow->data = "new data";
+$demorow->update();
+$demorow->delete();
+]]></programlisting>
+		</para>
+</refsect1>
+
+</refentry>

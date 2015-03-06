@@ -1,0 +1,97 @@
+<refentry id="{@id}">
+	<refnamediv>
+		<refname>Tutorial about using wo2009 framework</refname>
+		<refpurpose>This tutorial explains how to use wo2009 course framework.
+			This tutorial is evolving over time as framework gets new features.
+		</refpurpose>
+	</refnamediv>
+	<refsynopsisdiv>
+		<author>
+			Hannu Lohtander
+			<authorblurb>
+				{@link mailto:hannu.lohtander@uta.fi hannu.lohtander@uta.fi}
+         </authorblurb>
+		</author>
+	</refsynopsisdiv>
+	<refsect1 id="{@id intro}">
+		<title>About the Framework</title>
+		<para>What is framework. Web programming, framework is the wrapper
+			that is given when user build some simple web content. Simple or
+			complex content can be album, forum, guestbook or similar snippet of
+			program. Framework has three things, where it helps the programmer.
+			First, it usually gives some library, that can be used to extend MVC
+			model to content creation. Secondly, it offers the routing and the
+			control flow from http-request to http-response. Third, it gives
+			services like session manipulation, user object, database
+			abstraction, access control and other application wide
+			functionalities. Some of these are not implemented yet.
+</para>
+		<para>
+			Wo2009 framework has now only session service, and MVC base classes and very limited control flow through dispatch
+			functionality. Some
+			things are already given, like environment constants {@link
+			common.php}, class loader {@link someloader()} and interface
+			declarations. It also has in build-in request sanitation: SomeRequest
+			and has global object factory: SomeFactory.
+</para>
+
+	</refsect1>
+	<refsect1 id="{@id environment}">
+		<title>Environment services</title>
+		<para>
+			Framework has folder structure that group logical group of things to physical filder structure: library,
+			content.
+   </para>
+		<programlisting>
+			/index.php
+			<simpara></simpara>
+			/library
+			<simpara></simpara>
+			/content
+			<simpara></simpara>
+			/includes
+			<simpara></simpara>
+
+		</programlisting>
+		<refsect2 id="{@id library}">
+			<title>Library Folder</title>
+			<para>Library folder has files, that each hold one class that is part
+				of framework services. There are Session, Database, Request and
+				Response manipulation and other global objects. Usually main objects
+				are fetched using SomeFactory. Other objects are loaded using
+				someloader() function. See also {@link ISomeFactory}; {@link
+				someloader()}</para>
+			<para>
+				someloader() is used to load classes from library. This is
+				equivalent to java class import syntax:
+				<simpara></simpara>
+				<literal>import java.util.Date;</literal>
+				<simpara></simpara>
+				somelader follows the same dot notation, eg. session class from
+				library/some/session/session.php is loaded using:
+				<simpara></simpara>
+				<literal>someloader('some.session.session');</literal>
+				<simpara></simpara>
+				NOTE that library is not part of the path and '.php' of filename is
+				also left out. Library is merely a folder, that can be renamed if
+				that would be necessary. See tutorial {@tutorial
+				wo2009/wo2009.library.pkg} about library for more information on
+				library services.
+			</para>
+		</refsect2>
+		<refsect2 id="{@id content}">
+			<title>Content Folder</title>
+			<para>Contents are the extensions to the framework. Frameworks only
+				purpose is to help programmer writing extensions, like album,
+				blog, forum, etc... See content or mvc tutorial for more information
+				on how to build extension module.</para>
+		</refsect2>
+		<refsect2 id="{@id includes}">
+			<title>Includes Folder</title>
+			<para>Includes folder is privately used by framework. Usually it uses
+				it only when program is launched, to set environment for rest of the framework
+				to use. See {@link common.php} to see some globals, that framework
+				creates.</para>
+		</refsect2>
+	</refsect1>
+</refentry>

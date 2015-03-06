@@ -1,0 +1,8 @@
+AddHandler default-handler html
+
+# you should not put configuration.xml to web folder. 
+#This gives some protection, but is not really safe.
+<Files configuration.php>
+Order allow,deny
+Deny from all
+</Files> 

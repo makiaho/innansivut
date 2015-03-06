@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>File Source for error.php</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">wo2009</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_wo2009.html" class="menu">class tree: wo2009</a> ]
+		  [ <a href="../elementindex_wo2009.html" class="menu">index: wo2009</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="250" class="menu">
+      <b>Packages:</b><br />
+              <a href="../li_wo2009.html">wo2009</a><br />
+            <br /><br />
+                  
+      
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1 align="center">Source for file error.php</h1>
+<p>Documentation is available at <a href="../wo2009/_error.php.html">error.php</a></p>
+<div class="src-code">
+<ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">*&nbsp;framework&nbsp;error&nbsp;template.</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;wo2009</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-comm">//error&nbsp;is&nbsp;in&nbsp;variable&nbsp;$e</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-sym">!</span><span class="src-var">$e</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a9"></a>&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-str">&quot;error&nbsp;unknown&lt;br&nbsp;/&gt;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a10"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">exit</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-var">$typeoferror&nbsp;</span>=&nbsp;<a href="http://www.php.net/get_class">get_class</a><span class="src-sym">(</span><span class="src-var">$e</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-var">$message&nbsp;</span>=&nbsp;<span class="src-var">$e</span><span class="src-sym">-&gt;</span><span class="src-id">getMessage</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-var">$tracestr&nbsp;</span>=&nbsp;<span class="src-var">$e</span><span class="src-sym">-&gt;</span><span class="src-id">getTraceAsString</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line"><a name="a16"></a>&lt;h1&gt;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-var">$message&nbsp;</span><span class="src-php">?&gt;</span>&lt;/h1&gt;</div></li>
+<li><div class="src-line"><a name="a17"></a>&lt;p&gt;</div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a19"></a>echo&nbsp;<span class="src-str">&quot;&lt;pre&gt;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a20"></a>echo&nbsp;<span class="src-var">$tracestr</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a21"></a>echo&nbsp;<span class="src-str">&quot;&lt;/pre&gt;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line"><a name="a23"></a>&lt;/p&gt;</div></li>
+<li><div class="src-line"><a name="a24"></a>&lt;p&nbsp;style=&quot;font-size:8px&quot;&gt;debug:&nbsp;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-var">$typeoferror&nbsp;</span><span class="src-php">?&gt;</span>&lt;/p&gt;</div></li>
+</ol>
+</div>
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Mon, 25 Oct 2010 19:03:57 +0300 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

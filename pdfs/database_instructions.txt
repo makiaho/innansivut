@@ -1,0 +1,63 @@
+These instruction apply to those students, that use postgreSQL database from the shell.sis.uta.fi server and from the web application installed there.
+
+The shell server is shell.sis.uta.fi. You have there your public_html folder. If your login name is xx123456, the path is /home/stud/cs/xx123456/public_html. The http address is http://www.sis.uta.fi/~xx123456.
+
+When one logs in to the shell server, an identity is created: you are authenticated in that server. Postgre is able to use that identity, and allows you to access postgre shell without giving a username or password. That is true even, when the database server is not the shell server.
+
+Database server is dbstud.sis.uta.fi. You may test your access this with a shell command (replace always xx123456 with you login):
+psql -h dbstud.sis.uta.fi
+
+A postgre shell should open, which looks like "xx123456=>". If it does not open, error is given, and you do not have database. You can always exit postgre shell with command \q<Enter>. You need to require one.
+
+You can always use IDENTITY log in when you are using shell by using the command psql. But if you are connecting postgre from the web application, you are not authenticated identity user. In that case you must give both username and password (and host) to access database. By default, in a new postgre database, you have no password to give.
+
+You must create password to your account. That is simple to do. Use psql -h dbstud.sis.uta.fi command to log in to your postgre shell. In postgre shell write sql command that creates your password. Command is given below. Insert password of your choice to 'new password here'. You should not use same password as with your shell account, because this password is used in web applications, and those can be insecure. With username xx123456 and a example password "mysecurepass" command would look like this:
+
+ALTER ROLE xx123456 WITH password 'mysecurepass';
+
+Press enter, if you did't already. Now you have created password. Write it down. You can always change it from the shell because psql does not ask it.
+
+After you have created a password, you need to test it. You can not test it with psql command. That command allows you to give username and password, but any password, even unvalid or empty, will allow you to log in, because identity login always works. So you need to use script, and php script is simplest way to do this.
+
+Create file dbtest.php and place it to your public_html folder. Content of the file is as follows, change $myStudentNumber = ''; and $myPassword = ''; with valid values.
+
+<?php
+try {
+	
+	// CHANGE THESE!
+    $myStudentNumber = 'xx1234546';
+    $myPassword     = 'mysecret pass';
+
+//
+// DO NOT CHANGE ANYTHING BELOW.
+//
+	
+	$host = 'dbstud.sis.uta.fi';
+	$databasename = $myStudentNumber;
+	$username = $myStudentNumber;
+	$password = $myPassword;
+	
+	$dns = "pgsql:host=$host port=5432 user=$username password=$password dbname=$databasename";
+	
+	
+	$pdo = new PDO($dns);
+	$sql = "SELECT NOW()";
+	$result = $pdo->query($sql); 
+	print_r( $result->fetch() );
+	
+} catch (Exception $e) {
+	echo "<h1>ERROR</h1><p>For some reason (below) you do not have database access to postgre. Why not?<br ></p>\n";
+	?>
+	<pre>
+	<?php 
+	var_dump($e);
+	?>
+	</pre>
+	<?php
+}
+
+Now run it with browser. The http address is something like:
+http://www.sis.uta.fi/~xx123456/dbtest.php
+
+That should open page which show database time:
+Array ( [now] => 2012-01-11 20:15:23.216619+02 [0] => 2012-01-11 20:15:23.216619+02 ) 
