@@ -1,5 +1,3 @@
-test
-
 <?php
 //register form comes here
 
