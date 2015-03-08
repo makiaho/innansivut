@@ -1,3 +1,5 @@
+test
+
 <?php
 //register form comes here
 
@@ -23,26 +25,38 @@ if (!empty($errors)) {
 }
 
 ?>
-<h1><?php echo SomeText::_('FILL FORM H1') ?></h1>
+<h1><?php echo SomeText::_('taytapa lomake') ?></h1>
 
 <form action='index.php?app=account&view=register&tmpl=form' method='post'>
-<?php echo SomeText::_('USERNAME') ?>: <input type='text' name='username' value='<?php echo $username  ?>' />
+<?php 
+?>
+<br>
+<br>: <input type='text' name='username' value='<?php echo $username  ?>' />
 <br />
-Password: <input type='password' name='password' value='' />
+Passwweweweord: <input type='password' name='password' value='' />
 <br />
-Password again: <input type='password' name='password2' value='' />
+Password awwwgain: <input type='password' name='password2' value='' />
 <br />
 Email: <input type='text' name='email' value='<?php echo $email  ?>' />
 <br />
 Homepage: <input type='text' name='homepage' value='<?php echo $homepage  ?>' />
-
-<!--This is a comment. Comments are not displayed in the browser-->
-<!--TODO: poista tuo kotisivu2-->
-
-kotisivu2 : <input type='text' name='homepage' value='<?php echo $homepage  ?>' />
 <br />
 <br />
 
+<table width="600" border="0" cellpadding="0" cellspacing="0" align="left">
+<tr>
+<td colspan="2" width="600" height="45" align="center"><p><b>Rekister&ouml;itymislomake</b></p></td> 
+</tr><tr>
+<td width="180" height="30"><p class="lomake" required="required">K&auml;ytt&auml;j&auml;nimi*</p></td> 
+<td width="250" height="30"><input type="text" size="27" class="yhteystieto" name="kayttajanimi" required="required"></td>
+</tr><tr>
+<td width="180" height="30"><p class="lomake" required="required">Salasana*</p></td> 
+<td width="250" height="30"><input type="text" size="27" class="yhteystieto" name="etunimi" required="required"></td>
+</tr>
+</table>
+
+
+<input type="hidden" name="csrf" value="<?php echo SomeCSRF::newToken() ?>" />
 <input type='submit' name='smit' value='Register' />
 
 </form>
