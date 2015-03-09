@@ -14,13 +14,14 @@
 body {
  font-family: Arial, Helvetica, sans-serif;
  font-size: 13px;
+ background-color:#412f4b;
 }
 #wrapper { 
  margin: 0 auto;
  width: 922px;
 }
 #faux {
- background: url(faux-1-2-col.gif);
+ background-color:#e6d1f3;
  margin-bottom: 5px;
  overflow: auto; /* Paul O Brien Fix for IE www.pmob.co.uk */
  width: 100%
@@ -31,13 +32,13 @@ body {
  padding: 10px;
  height: 100px;
  margin: 10px 0px 5px 0px;
- background: #D1DBDB;
+background-color:#412f4b;
 }
 #navigation {
  color: #333;
  padding: 10px;
  margin: 0px 0px 5px 0px;
- background: #ABBEBE;
+background-color:#d4c0e0;
 }
 #leftcolumn { 
  display: inline;
@@ -60,7 +61,7 @@ body {
  width: 902px;
  clear: both;
  color: #333;
- background: #ABBEBE;
+ background-color:#e6d1f3;
  margin: 0px 0px 10px 0px;
  padding: 10px;
 }
