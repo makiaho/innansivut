@@ -1,6 +1,5 @@
 <?php
 //register form comes here
-//TODO. voi poistaa - pieni muutos vaan muutoksen vuoksi :)
 $userdata = $this->userdata;
 $errors = $this->errors;
 
