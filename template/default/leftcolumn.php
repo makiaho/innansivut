@@ -4,19 +4,19 @@ Quick links.
 Rss feeds (is empty)
 Login.
 -->
-    <h3>Quick Links</h3>
+    <h5>Miten tätä</h5>
 <div>
-<p>
+<p class="laatikko">
     <a href="?app=account&action=register">Register</a>
 </p>
 </div>
-<h3>Rss Feeds</h3>
+<h5>sivua saisi muutettua</h5>
 <div>
-<p>
-Intentionally left empty.
+<p class="laatikko">
+niin että teksti oikealla näkyisi kokonaan?
 </p>
 </div>
-<h3>Login</h3>
+<h5>Login</h5>
 <div>
 <p>
 <?php 
@@ -32,9 +32,9 @@ if (SomeFactory::getUser()->getId() > 0) {
 
 <br />
 <form action='index.php?app=login&view=login' method='post'>
-    Username: <input type='text' name='username' value='' width="20" style="width:200px" />
+    Username: <input type='text' name='username' value='' width="20" style="width:100px" />
 <br />
-Password: <input type='password' name='password' value='' width="20" style="width:200px" />
+Password: <input type='password' name='password' value='' width="20" style="width:100px" />
 <br />
 <input type='submit' name='smit' value='LogIn' />
 </form>

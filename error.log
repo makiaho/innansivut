@@ -52,3 +52,45 @@
 [06-Mar-2015 17:27:27 Europe/Berlin] PHP Stack trace:
 [06-Mar-2015 17:27:27 Europe/Berlin] PHP   1. {main}() C:\xampp\htdocs\omanelamaniluoja\index.php:0
 [06-Mar-2015 17:27:27 Europe/Berlin] PHP   2. SomeApplication->dispatch() C:\xampp\htdocs\omanelamaniluoja\index.php:54
+[08-Mar-2015 17:27:23 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 59
+[08-Mar-2015 17:37:52 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 59
+[08-Mar-2015 17:38:12 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 59
+[08-Mar-2015 17:38:46 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 59
+[08-Mar-2015 17:40:55 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 59
+[08-Mar-2015 17:42:22 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 59
+[08-Mar-2015 17:43:42 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 59
+[08-Mar-2015 17:44:04 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 59
+[08-Mar-2015 17:47:06 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 58
+[08-Mar-2015 17:47:08 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 58
+[08-Mar-2015 17:47:17 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 59
+[08-Mar-2015 17:47:39 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 59
+[08-Mar-2015 17:47:41 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 59
+[08-Mar-2015 17:50:01 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 59
+[08-Mar-2015 17:50:49 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 59
+[08-Mar-2015 17:50:50 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 59
+[08-Mar-2015 17:50:51 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 59
+[08-Mar-2015 17:51:06 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 59
+[08-Mar-2015 17:51:34 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 59
+[08-Mar-2015 18:02:44 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 59
+[08-Mar-2015 18:06:34 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 57
+[09-Mar-2015 18:43:42 Europe/Berlin] PHP Fatal error:  Call to a member function fetchAll() on a non-object in C:\xampp\htdocs\omanelamaniluoja\content\quotes\classes\quotes.php on line 15
+[09-Mar-2015 19:07:51 Europe/Berlin] PHP Fatal error:  Call to a member function fetchAll() on a non-object in C:\xampp\htdocs\omanelamaniluoja\content\quotes\classes\quotes.php on line 15
+[09-Mar-2015 19:09:15 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 84
+[09-Mar-2015 19:09:42 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 84
+[09-Mar-2015 19:10:32 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 84
+[09-Mar-2015 19:10:34 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 84
+[09-Mar-2015 19:11:09 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 84
+[09-Mar-2015 19:11:45 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 57
+[09-Mar-2015 19:11:50 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 57
+[09-Mar-2015 19:11:52 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 57
+[09-Mar-2015 19:12:36 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 57
+[09-Mar-2015 19:13:25 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 57
+[09-Mar-2015 19:13:28 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 57
+[09-Mar-2015 19:14:30 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 57
+[09-Mar-2015 19:14:38 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 57
+[09-Mar-2015 19:16:39 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 57
+[09-Mar-2015 19:16:59 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 57
+[09-Mar-2015 19:17:41 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 79
+[09-Mar-2015 19:22:56 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 57
+[09-Mar-2015 21:39:40 Europe/Berlin] PHP Fatal error:  Class 'SomeCSRF' not found in C:\xampp\htdocs\omanelamaniluoja\content\account\view\register\tmpl\form.php on line 57
+[12-Mar-2015 15:09:02 Europe/Berlin] PHP Fatal error:  Call to a member function fetchAll() on a non-object in C:\xampp\htdocs\omanelamaniluoja\content\quotes\classes\quotes.php on line 15

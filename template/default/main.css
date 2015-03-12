@@ -27,17 +27,19 @@ body {
  width: 100%
 }
 #header {
- color: #333;
+ color: #fff;
  width: 902px;
  padding: 10px;
- height: 100px;
- margin: 10px 0px 5px 0px;
+ height: 248px;
+ margin: 15px 0px 0px 0px;
 background-color:#412f4b;
+background-image:url(kuvat/ylaosa2.jpg);
+background-repeat:no-repeat; 
 }
 #navigation {
  color: #333;
  padding: 10px;
- margin: 0px 0px 5px 0px;
+ margin: 0px 0px 0px 0px;
 background-color:#d4c0e0;
 }
 #leftcolumn { 
