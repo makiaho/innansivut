@@ -32,28 +32,15 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <center>
-<table align="center" border="0" cellpadding="0" cellspacing="0" width="1000">
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="683">
 	<tbody>
+		
 		<tr>
-			<td class="top" height="248" width="1000">&nbsp;</td>
-		</tr>
-		<tr>
-			<td align="center" class="valikko" height="40" width="1000">
-			<p class="valikko"><a href="index.html">Koti</a> | <a href="manifestointi.html">Manifestointi</a> | <a href="mentorointi.html">Mentorointi</a> | <a href="kurssit.html">Kurssit</a> | <a href="tuotteet.html">Tuotteet</a> | <a href="ajankohtaista.html">Ajankohtaista</a> | <a href="taustaa.html">Taustaa</a> | <a href="http://omanelamaniluoja.fi/blogi">Blogi</a> | <a href="yhteystiedot.html">Yhteystiedot</a> | <a href="http://facebook.com/omanelamaniluoja" target="_blank">Fb</a></p>
-			</td>
-		</tr>
-		<tr>
-			<td align="left" class="sisalto" height="1000" valign="top" width="1000"><br />
-			<h1>Luo el&auml;m&auml;&auml;si tietoisesti, syvimmist&auml; toiveistasi k&auml;sin</h1>
-			<p>
+			<td align="left" class="sisalto" height="800" valign="top" width="683">
+			<h6>Luo el&auml;m&auml;&auml;si tietoisesti, syvimmist&auml; toiveistasi k&auml;sin</h6>
+			<p class="laatikko">
 			
-			
-			</p>
-			<table align="center" border="0" cellpadding="0" cellspacing="0" class="uutiskirje" height="65" width="800">
-				<tbody>
-					<tr>
-						<td height="80" valign="top" width="525">
-						<p class="laatikko">N&auml;iden sivujen tarkoitus on auttaa sinua el&auml;m&auml;&auml;n todeksi t&auml;ysi potentiaalisi. T&auml;ydess&auml; potentiaalissaan oleva ihminen 
+			N&auml;iden sivujen tarkoitus on auttaa sinua el&auml;m&auml;&auml;n todeksi t&auml;ysi potentiaalisi. T&auml;ydess&auml; potentiaalissaan oleva ihminen 
 						on aidosti ja avoimesti oma itsens&auml;. H&auml;n ilmaisee itse&auml;&auml;n vapaasti ja aidosti. T&auml;ydess&auml; potentiaalissaan oleva 
 						ihminen tuntee todellisen arvonsa. H&auml;n ei kuvittele olevansa huonompi tai parempi kuin toiset, vaan tiedostaa 
 						oman ainutlaatuisen upeutensa ja tiet&auml;&auml; olevansa yht&auml; arvokas kuin kuka tahansa toinen.<br><br>
@@ -61,7 +48,13 @@
 						ja unelmille, ja antaa el&auml;m&auml;ns&auml; muovautua niiden mukaiseksi. H&auml;n tekee my&ouml;s itse joka p&auml;iv&auml; aktiivisesti kaikkensa 
 						toteuttaakseen syvimm&auml;t unelmansa.<br><br>
 						T&auml;ydess&auml; potentiaalissaan el&auml;miseen kuuluu syv&auml; t&auml;yttymys. Siihen kuuluvat jatkuvasti syvenev&auml; aito ja puhdas ilo 
-						el&auml;m&auml;st&auml;, keveys, vapaus, rakkaus, luottamus ja kiitollisuus.</p>
+						el&auml;m&auml;st&auml;, keveys, vapaus, rakkaus, luottamus ja kiitollisuus.
+			</p>
+			<table align="center" border="0" cellpadding="0" cellspacing="0" class="uutiskirje" height="65" width="683">
+				<tbody>
+					<tr>
+						<td height="80" valign="top" width="5">
+						
 						</td>
 						<td height="80" width="275"><!-- Begin MailChimp Signup Form -->
 						<div id="mc_embed_signup">
@@ -273,11 +266,11 @@ function mce_success_cb(resp){
 
 </script><!--End mc_embed_signup--><br />
 						&nbsp;</td>
+						<td width="403"></td>
 					</tr>
 				</tbody>
 			</table>
-			<a href="itsensa_rakastaminen.html"><img align="center" class="taustaa" src="kuvat/itsensa_rak_illat.jpg" />
-			<a href="avaudu_rakkaudelle.html"><img align="center" class="taustaa" src="kuvat/avaudu_rakkaudelle_tuotteet-360-255.jpg" />
+		
 			<table width="600">
 			<tr>
 			<td width="100">
@@ -286,42 +279,42 @@ function mce_success_cb(resp){
 			</td>
 			</tr>
 			</table>
-			<table align="center" border="0" cellpadding="0" cellspacing="0" width="1000">
+			<table align="center" border="0" cellpadding="0" cellspacing="0" width="800">
 				<tbody>
 					<tr>
-						<td height="215" width="122">&nbsp;</td>
+						
 						<td align="center" height="215" valign="top" width="215"><a href="manifestointi.html"><img class="kurssit" height="215" src="kuvat/manifestointi.jpg" width="215" /></a></td>
 						<td height="210" width="50">&nbsp;</td>
 						<td align="center" height="215" valign="top" width="215"><a href="itsensa_rakastaminen.html"><img class="kurssit" height="215" src="kuvat/itsensarak.jpg" width="215" /></a></td>
 						<td height="215" width="50">&nbsp;</td>
 						<td align="center" height="215" valign="top" width="215"><a href="pelon_kesyttaminen.html"><img class="kurssit" height="215" src="kuvat/pelonkes.jpg" width="215" /></a></td>
-						<td height="215" width="123">&nbsp;</td>
+						<td height="215" width="55">&nbsp;</td>
 					</tr>
 					<tr>
-						<td colspan="7" height="40" width="1000">&nbsp;</td>
+						<td colspan="7" height="40" width="800">&nbsp;</td>
 					</tr>
 					<tr>
-						<td height="215" width="90">&nbsp;</td>
+						
 						<td align="left" height="215" valign="top" width="215"><a href="ystaviksi_rahan_kanssa.html"><img class="kurssit" height="215" src="kuvat/yrk2.jpg" width="215" /></a></td>
 						<td height="215" width="50">&nbsp;</td>
 						<td align="left" height="215" valign="top" width="215"><a href="tuotteet.html"><img class="kurssit" height="215" src="kuvat/ohjatut_manifharj.jpg" width="215" /></a></td>
 			<td height="150" width="50">&nbsp;</td>
 			<td align="left" height="215" valign="top" width="215"><a href="mentorointi.html"><img class="kurssit" height="215" src="kuvat/manifestointimentorointi.jpg" width="215" /></a></td>
-			<td height="215" width="100">&nbsp;</td>
+			<td height="215" width="50">&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="7" height="40" width="1000">
+			<td colspan="7" height="40" width="800">
 			<div class="fb-like" data-href="http://omanelamaniluoja.fi/" data-send="false" data-show-faces="false" data-width="450">&nbsp;</div>
 			</td>
 		</tr>
 		<tr>
-			<td height="215" width="90"></td>
+			
 			<td align="left" height="215" valign="top" width="215">&nbsp;</td>
 			<td height="215" width="50">&nbsp;</td>
 			<td align="center" height="215" valign="top" width="215">&nbsp;</td>
 			<td height="150" width="50">&nbsp;</td>
 			<td align="center" height="215" valign="top" width="215">&nbsp;</td>
-			<td height="215" width="100">&nbsp;</td>
+			<td height="215" width="50">&nbsp;</td>
 		</tr>
 	</tbody>
 </table>

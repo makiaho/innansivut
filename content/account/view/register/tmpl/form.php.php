@@ -1,5 +1,6 @@
 <?php
 //register form comes here
+
 $userdata = $this->userdata;
 $errors = $this->errors;
 
@@ -53,7 +54,7 @@ Homepage: <input type='text' name='homepage' value='<?php echo $homepage  ?>' />
 </table>
 
 
-<input type="hidden" name="csrf" value="<?php /*todo, mistä tämä echo SomeCSRF::newToken() */?>" />
+<input type="hidden" name="csrf" value="<?php echo SomeCSRF::newToken() ?>" />
 <input type='submit' name='smit' value='Register' />
 
 </form>

@@ -14,8 +14,7 @@ a  { color:#000000;
     
 td	 { background-color:#e6d1f3; }
     
-td.top {background-image:url(kuvat/ylaosa2.jpg);
-       background-repeat:no-repeat; }
+td.top {background-repeat:no-repeat; }
        
 td.laatikko  {background-color:#e6d1f3;
                border-color:#412f4b;
@@ -49,7 +48,17 @@ h3  {color:#000000;
 h4  {color:#000000;
         font-family:Arial;
         font-size:19pt;
-        margin:25px 0px 30px 100px; } 
+        margin:25px 0px 30px 100px; }
+         
+h5  {color:#000000;
+        font-family:Arial;
+        font-size:16pt;
+        margin:20px 20px 20px 30px; }
+        
+h6  {color:#000000;
+		font-family:Arial;
+		font-size:22pt;
+		margin:20px 20px 20px 30px; }
                
 p  {color:#000000;
 	   font-family:Arial;
