@@ -19,6 +19,7 @@ body {
 #wrapper { 
  margin: 0 auto;
  width: 922px;
+ 
 }
 #faux {
  background-color:#e6d1f3;
@@ -37,7 +38,7 @@ background-image:url(kuvat/ylaosa2.jpg);
 background-repeat:no-repeat; 
 }
 #navigation {
- color: #333;
+ color: #d4c0e0;
  padding: 10px;
  margin: 0px 0px 0px 0px;
 background-color:#d4c0e0;

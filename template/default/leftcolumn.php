@@ -4,18 +4,15 @@ Quick links.
 Rss feeds (is empty)
 Login.
 -->
-    <h5>Miten tätä</h5>
+    
 <div>
 <p class="laatikko">
-    <a href="?app=account&action=register">Register</a>
+Omat tiedot<br>
+    <a href="?app=account&action=register"><u>Register</u></a><br>
+	Mitä kaikkea tähän palkkiin nyt tuleekaan
 </p>
 </div>
-<h5>sivua saisi muutettua</h5>
-<div>
-<p class="laatikko">
-niin että teksti oikealla näkyisi kokonaan?
-</p>
-</div>
+
 <h5>Login</h5>
 <div>
 <p>

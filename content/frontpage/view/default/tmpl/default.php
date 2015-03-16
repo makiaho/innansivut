@@ -16,7 +16,7 @@
 	
 	<link href="http://cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
 <style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	#mc_embed_signup{background:#e6d1f3; clear:left; font:14px Helvetica,Arial,sans-serif; }
 	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
@@ -38,7 +38,7 @@
 		<tr>
 			<td align="left" class="sisalto" height="800" valign="top" width="683">
 			<h6>Luo el&auml;m&auml;&auml;si tietoisesti, syvimmist&auml; toiveistasi k&auml;sin</h6>
-			<p class="laatikko">
+			<p class="laatikko4">
 			
 			N&auml;iden sivujen tarkoitus on auttaa sinua el&auml;m&auml;&auml;n todeksi t&auml;ysi potentiaalisi. T&auml;ydess&auml; potentiaalissaan oleva ihminen 
 						on aidosti ja avoimesti oma itsens&auml;. H&auml;n ilmaisee itse&auml;&auml;n vapaasti ja aidosti. T&auml;ydess&auml; potentiaalissaan oleva 
@@ -50,13 +50,14 @@
 						T&auml;ydess&auml; potentiaalissaan el&auml;miseen kuuluu syv&auml; t&auml;yttymys. Siihen kuuluvat jatkuvasti syvenev&auml; aito ja puhdas ilo 
 						el&auml;m&auml;st&auml;, keveys, vapaus, rakkaus, luottamus ja kiitollisuus.
 			</p>
+			
 			<table align="center" border="0" cellpadding="0" cellspacing="0" class="uutiskirje" height="65" width="683">
 				<tbody>
 					<tr>
 						<td height="80" valign="top" width="5">
 						
 						</td>
-						<td height="80" width="275"><!-- Begin MailChimp Signup Form -->
+						<td height="80" width="275" class="laatikko"><!-- Begin MailChimp Signup Form -->
 						<div id="mc_embed_signup">
 						<form action="http://hiljaisuudenpuutarha.us5.list-manage.com/subscribe/post?u=cbfbabcedcb7cc81bbba3eca3&amp;id=e235d172b9" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
 						<p class="laatikko3">Rohkeutta oman tien kulkemiseen - Tilatessasi uutiskirjeen saat ilmaisen manifestointi&auml;&auml;nitteen</p>
@@ -270,51 +271,51 @@ function mce_success_cb(resp){
 					</tr>
 				</tbody>
 			</table>
-		
-			<table width="600">
+		<br><br>
+			<table width="683">
 			<tr>
 			<td width="100">
 			</td>
-			<td width="500"><div class="fb-like" data-href="http://omanelamaniluoja.fi/" data-send="false" data-show-faces="false" data-width="450">&nbsp;</div>
+			<td width="583"><div class="fb-like" data-href="http://omanelamaniluoja.fi/" data-send="false" data-show-faces="false" data-width="450">&nbsp;</div>
 			</td>
 			</tr>
 			</table>
-			<table align="center" border="0" cellpadding="0" cellspacing="0" width="800">
+			<table align="center" border="0" cellpadding="0" cellspacing="0" width="683">
 				<tbody>
 					<tr>
 						
 						<td align="center" height="215" valign="top" width="215"><a href="manifestointi.html"><img class="kurssit" height="215" src="kuvat/manifestointi.jpg" width="215" /></a></td>
-						<td height="210" width="50">&nbsp;</td>
+						<td height="210" width="12">&nbsp;</td>
 						<td align="center" height="215" valign="top" width="215"><a href="itsensa_rakastaminen.html"><img class="kurssit" height="215" src="kuvat/itsensarak.jpg" width="215" /></a></td>
-						<td height="215" width="50">&nbsp;</td>
+						<td height="215" width="13">&nbsp;</td>
 						<td align="center" height="215" valign="top" width="215"><a href="pelon_kesyttaminen.html"><img class="kurssit" height="215" src="kuvat/pelonkes.jpg" width="215" /></a></td>
-						<td height="215" width="55">&nbsp;</td>
+						<td height="215" width="13">&nbsp;</td>
 					</tr>
 					<tr>
-						<td colspan="7" height="40" width="800">&nbsp;</td>
+						<td colspan="7" height="40" width="683">&nbsp;</td>
 					</tr>
 					<tr>
 						
 						<td align="left" height="215" valign="top" width="215"><a href="ystaviksi_rahan_kanssa.html"><img class="kurssit" height="215" src="kuvat/yrk2.jpg" width="215" /></a></td>
-						<td height="215" width="50">&nbsp;</td>
+						<td height="215" width="12">&nbsp;</td>
 						<td align="left" height="215" valign="top" width="215"><a href="tuotteet.html"><img class="kurssit" height="215" src="kuvat/ohjatut_manifharj.jpg" width="215" /></a></td>
-			<td height="150" width="50">&nbsp;</td>
-			<td align="left" height="215" valign="top" width="215"><a href="mentorointi.html"><img class="kurssit" height="215" src="kuvat/manifestointimentorointi.jpg" width="215" /></a></td>
-			<td height="215" width="50">&nbsp;</td>
+						<td height="150" width="13">&nbsp;</td>
+						<td align="left" height="215" valign="top" width="215"><a href="mentorointi.html"><img class="kurssit" height="215" src="kuvat/manifestointimentorointi.jpg" width="215" /></a></td>
+						<td height="215" width="13">&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="7" height="40" width="800">
+			<td colspan="7" height="40" width="683">
 			<div class="fb-like" data-href="http://omanelamaniluoja.fi/" data-send="false" data-show-faces="false" data-width="450">&nbsp;</div>
 			</td>
 		</tr>
 		<tr>
 			
 			<td align="left" height="215" valign="top" width="215">&nbsp;</td>
-			<td height="215" width="50">&nbsp;</td>
+			<td height="215" width="12">&nbsp;</td>
 			<td align="center" height="215" valign="top" width="215">&nbsp;</td>
-			<td height="150" width="50">&nbsp;</td>
+			<td height="150" width="13">&nbsp;</td>
 			<td align="center" height="215" valign="top" width="215">&nbsp;</td>
-			<td height="215" width="50">&nbsp;</td>
+			<td height="215" width="13">&nbsp;</td>
 		</tr>
 	</tbody>
 </table>

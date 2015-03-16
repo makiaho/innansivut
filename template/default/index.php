@@ -14,7 +14,7 @@
 <style type="text/css">
 .menu{
     width: 100%;
-    background-color: #333; 
+    background-color: #e6d1f3; 
 }
 
 .menu ul{
@@ -28,7 +28,7 @@
     float: left; text-decoration: none;
     color: white;
     padding: 10.5px 11px;
-    background-color: #333; }
+    background-color: #d4c0e0; }
  
 .menu ul li a:visited{
     color: white;}
@@ -80,11 +80,7 @@ table.sitemaptable th, table.sitemaptable td {
          <div id="navigation">
 		 	
 		 	<div class="menu">
-<ul>
-<li><a href="index.php">Koti</a></li>
 
-
-</ul>
 <p class="valikko"><a href="index.php">Koti</a> | <a href="manifestointi.html">Manifestointi</a> | <a href="mentorointi.html">Mentorointi</a> | <a href="kurssit.html">Kurssit</a> | <a href="tuotteet.html">Tuotteet</a> | <a href="ajankohtaista.html">Ajankohtaista</a> |
 			 <a href="taustaa.html">Taustaa</a> | <a href="http://omanelamaniluoja.fi/blogi">Blogi</a> | <a href="yhteystiedot.html">Yhteystiedot</a> | <a href="http://facebook.com/omanelamaniluoja" target="_blank">Fb</a></p>
 <br style="clear:left"/>
@@ -126,7 +122,7 @@ table.sitemaptable th, table.sitemaptable td {
          <!-- Begin Footer -->
          <div id="footer">
 		       
-               This is the Footer		
+               Copyright &copy Inna Thil	
 
          </div>
 		 <!-- End Footer -->
