@@ -22,35 +22,13 @@ if (!empty($errors)) {
 }
 
 ?>
-<h1><?php echo SomeText::_('taytapa lomake') ?></h1>
-
-<form action='index.php?app=account&view=register&tmpl=form' method='post'>
-<?php 
-?>
-<br>
-<br>Username: <input type='text' name='username' value='<?php echo $username  ?>' />
-<br />
-Passwweweweord: <input type='password' name='password' value='' />
-<br />
-Password awwwgain: <input type='password' name='password2' value='' />
-<br />
-Email: <input type='text' name='email' value='<?php echo $email  ?>' />
-<br />
-Homepage: <input type='text' name='homepage' value='<?php echo $homepage  ?>' />
-<br />
-<br />
-<input type="hidden" name="csrf" value="<?php /*todo, mistä tämä echo SomeCSRF::newToken() */?>" />
-<input type='submit' name='smit' value='Tallenna tiedot' />
-
-</form>
 
 
- 
+
+ <form action='index.php?app=account&view=register&tmpl=form' method='post'>
 <table width="430" border="0" cellpadding="0" cellspacing="0" align="left">
 
-<form action='index.php?app=account&view=register&tmpl=form' method='post'>
-<?php 
-?>
+ 
 <tr>
 <td colspan="2" width="430" height="45" align="center"><p><b>Rekister&ouml;idy Oman Elämäni Luojan käyttäjäksi</b></p></td> 
 </tr><tr>
@@ -82,11 +60,22 @@ Homepage: <input type='text' name='homepage' value='<?php echo $homepage  ?>' />
 <td width="250" height="30"><input type="text" size="27" class="yhteystieto" name="postitoimip" required=""></td>
 </tr><tr>
 <td width="180" height="30"><p class="lomake">Syntymäaika</p></td>
-<td width="250" height="30"><input type="text" size="27" class="syntyma-aika" name="Syntyma-aika" required=""></td>
+<td width="250" height="30"><input type="text" size="27" class="yhteystieto" name="Syntyma-aika" required=""></td>
+
+</tr><tr>
+<td width="180" height="30"><p class="lomake">Käyttäjänimi</p></td>
+<td width="250" height="30"><input type="text" size="27" class="yhteystieto" name="username" required=""></td>
+</tr><tr>
+<td width="180" height="30"><p class="lomake">Salasana</p></td>
+<td width="250" height="30"><input type="text" size="27" class="yhteystieto" name="password" required=""></td>
+</tr><tr>
+<td width="180" height="30"><p class="lomake">VAhvista salasana</p></td>
+<td width="250" height="30"><input type="text" size="27" class="yhteystieto" name="password2" required=""></td>
+
 </tr>
 <input type="hidden" name="csrf" value="<?php /*todo, mistä tämä echo SomeCSRF::newToken() */?>" />
-<input type='submit' name='smit' value='Tallenna tiedot' />
 
+<input type='submit' name='submit' value='Tallennapa tiedot' />
 </form>
 <hr />
 <a href='index.php?app=account&view=register&tmpl=form&language=en_GB'>English</a><br />

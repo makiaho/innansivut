@@ -1,5 +1,5 @@
 <?php 
-ob_start();
+    ob_start();
 ob_implicit_flush(FALSE);
 /**
 * index bootstrap
