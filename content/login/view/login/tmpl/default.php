@@ -5,7 +5,7 @@ if (SomeFactory::getApplication()->getSysMessage()) {
 
 ?>
 
-<h1>login form</h1>
+<h1>Kirjaudu sis&auml;&auml;n</h1>
 
 <?php 
 if (SomeFactory::getUser()->getId() > 0) {
@@ -20,11 +20,11 @@ if (SomeFactory::getUser()->getId() > 0) {
 
 <br />
 <form action='index.php?app=login&view=login' method='post'>
-Username: <input type='text' name='username' value='' />
+K&auml;ytt&auml;j&auml;nimi: <input type='text' name='username' value='' />
 <br />
-Password: <input type='password' name='password' value='' />
+Salasana: <input type='password' name='password' value='' />
 <br />
-<input type='submit' name='smit' value='LogIn' />
+<input type='submit' name='smit' value='Kirjaudu sis&auml;&auml;n' />
 </form>
 
 <?php 
