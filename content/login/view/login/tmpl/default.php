@@ -23,17 +23,17 @@ if (SomeFactory::getUser()->getId() > 0) {
 <table width"683">
 <tr>
 <td width="120"></td>
-<td width="180" height="30"><p class="lomake">K&auml;ytt&auml;j&auml;nimi:</p> <input type='text' name='username' value=''  required="required" />
+<td width="563" height="30"><p class="lomake">K&auml;ytt&auml;j&auml;nimi (s&auml;hk&ouml;postiosoite):</p> <input type='text' name='username' value=''  required="required" />
 <br /></td>
 
 </tr><tr>
 <td width="120"></td>
-<td width="180" height="30"><p class="lomake">Salasana:</p> <input type='password' name='password' value=''  required="required" />
+<td width="563" height="30"><p class="lomake">Salasana:</p> <input type='password' name='password' value=''  required="required" />
 <br /></td>
 </tr>
 <tr>
 <td width="120"></td>
-<td width="180" height="30"><form>
+<td width="563" height="30"><form>
 <input type="checkbox" name="muista_salasana" value="muista_salasana">Muista minut</u></a>
 </form>
 </td>
@@ -43,7 +43,7 @@ if (SomeFactory::getUser()->getId() > 0) {
 <table width"683">
 <tr>
 <td width="120"></td>
-<td width="180" height="30">
+<td width="563" height="30">
 <input type='submit' name='smit' value='Kirjaudu sis&auml;&auml;n' />
 </td>
 
@@ -51,6 +51,7 @@ if (SomeFactory::getUser()->getId() > 0) {
 
 </table>
 </form>
+<p><u>Unohditko salasanasi?</u></p>
 <br><br><br><br><br>
 <?php 
 }
