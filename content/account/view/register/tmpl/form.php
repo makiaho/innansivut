@@ -22,8 +22,14 @@ if (!empty($errors)) {
 }
 
 ?>
-
-
+<table width="683">
+			<tr>
+			<td width="450">
+			</td>
+			<td width="233"><p class="lomake"><a href="?app=login"><u>Kirjaudu sis&auml;&auml;n</u></a></p>
+			</td></tr>
+			</table>
+<br>
 
  <form action='index.php?app=account&view=register&tmpl=form' method='post'>
 <table width="430" border="0" cellpadding="0" cellspacing="0" class="lomake" align="left">
