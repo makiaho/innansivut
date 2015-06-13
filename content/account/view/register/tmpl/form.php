@@ -33,13 +33,21 @@ if (!empty($errors)) {
 }
 
 ?>
-
-
+<table width="683">
+			<tr>
+			<td width="450">
+			</td>
+			<td width="233"><p class="lomake"><a href="?app=login"><u>Kirjaudu sis&auml;&auml;n</u></a></p>
+			</td></tr>
+			</table>
+<br>
 
  <form id='formi' action='index.php?app=account&view=register&tmpl=form' method='post'>
-<table width="430" border="0" cellpadding="0" cellspacing="0" align="left">
+<table width="430" border="0" cellpadding="0" cellspacing="0" class="lomake" align="left">
+<tr>
+<td width="430" align="left" valign="top">
 
- 
+<table width="430" border="0" cellpadding="0" cellspacing="0" align="left">
 <tr>
 <td colspan="2" width="430" height="45" align="center"><p><b>Rekister&ouml;idy Oman Elämäni Luojan käyttäjäksi</b></p></td> 
 </tr><tr>
@@ -80,19 +88,27 @@ if (!empty($errors)) {
 <td width="180" height="30"><p class="lomake">Salasana</p></td>
 <td width="250" height="30"><input type="text" size="27" class="yhteystieto" name="password" required=""></td>
 </tr><tr>
-<td width="180" height="30"><p class="lomake">VAhvista salasana</p></td>
+<td width="180" height="30"><p class="lomake">Vahvista salasana</p></td>
 <td width="250" height="30"><input type="text" size="27" class="yhteystieto" name="password2" required=""></td>
 
 </tr>
+</td>
+</tr><tr>
+<td width="65"></td>
+ <td width="365" height="65" align="left" valign="top">
 <input type="hidden" name="csrf" value="<?php /*todo, mistä tämä echo SomeCSRF::newToken() */?>" />
+<input type='submit' name='submit' value='Tallenna tiedot' /></td>
 
-<input type='submit' name='submit' value='Tallennapa tiedot' />
-</form>
-<hr />
-<a href='index.php?app=account&view=register&tmpl=form&language=en_GB'>English</a><br />
-<a href='index.php?app=account&view=register&tmpl=form&language=fi_FI'>Suomi</a><br />
 
+  </td>  
+  </tr>
+  </table>
+  </form> 
+
+</td>
+</tr>
 </table>
+
 
 
 
