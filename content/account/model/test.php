@@ -10,6 +10,14 @@ someloader('some.application.model');
 * @subpackage account
 */
 
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+asfsaf
+</script>
+
+
+
 class SomeModelTest extends SomeModel {
 
 	public $results;

@@ -1,3 +1,14 @@
+<html>
+    <head>
+
+        
+ 
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+    </head>
+
 <?php
 //register form comes here
 $userdata = $this->userdata;
@@ -25,7 +36,7 @@ if (!empty($errors)) {
 
 
 
- <form action='index.php?app=account&view=register&tmpl=form' method='post'>
+ <form id='formi' action='index.php?app=account&view=register&tmpl=form' method='post'>
 <table width="430" border="0" cellpadding="0" cellspacing="0" align="left">
 
  

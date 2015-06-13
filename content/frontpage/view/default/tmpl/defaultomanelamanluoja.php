@@ -20,27 +20,7 @@
 	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
- 
- 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
- 
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  
-  
-  
- 
- 
-  <script>
-  $(function() {
-    $( "#haitari" ).accordion();
-  });
-  </script>
-</head>
- 
- 
- 
+  </head>
   <body>
 <div id="fb-root" pbzloc="0">&nbsp;</div>
 <script>(function(d, s, id) {
@@ -65,24 +45,18 @@
 			</td></tr>
 			</table>
 			<h6>Luo el&auml;m&auml;&auml;si tietoisesti, syvimmist&auml; toiveistasi k&auml;sin</h6>
-			
 			<p class="laatikko4">
 			
-			 
-		 
 			N&auml;iden sivujen tarkoitus on auttaa sinua el&auml;m&auml;&auml;n todeksi t&auml;ysi potentiaalisi. T&auml;ydess&auml; potentiaalissaan oleva ihminen 
 						on aidosti ja avoimesti oma itsens&auml;. H&auml;n ilmaisee itse&auml;&auml;n vapaasti ja aidosti. T&auml;ydess&auml; potentiaalissaan oleva 
 						ihminen tuntee todellisen arvonsa. H&auml;n ei kuvittele olevansa huonompi tai parempi kuin toiset, vaan tiedostaa 
 						oman ainutlaatuisen upeutensa ja tiet&auml;&auml; olevansa yht&auml; arvokas kuin kuka tahansa toinen.<br><br>
-			 
 						T&auml;ydess&auml; potentiaalissaan oleva ihminen on rohkea. H&auml;n uskaltaa antautua syv&auml;lt&auml; sis&auml;lt&auml;&auml;n kumpuaville toiveille 
 						ja unelmille, ja antaa el&auml;m&auml;ns&auml; muovautua niiden mukaiseksi. H&auml;n tekee my&ouml;s itse joka p&auml;iv&auml; aktiivisesti kaikkensa 
 						toteuttaakseen syvimm&auml;t unelmansa.<br><br>
 						T&auml;ydess&auml; potentiaalissaan el&auml;miseen kuuluu syv&auml; t&auml;yttymys. Siihen kuuluvat jatkuvasti syvenev&auml; aito ja puhdas ilo 
 						el&auml;m&auml;st&auml;, keveys, vapaus, rakkaus, luottamus ja kiitollisuus.
 			</p>
-			 
-			 
 			
 			<table align="center" border="0" cellpadding="0" cellspacing="0" class="uutiskirje" height="65" width="683">
 				<tbody>
