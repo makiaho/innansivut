@@ -83,8 +83,8 @@ table.sitemaptable th, table.sitemaptable td {
 <table align="center">
 <tr>
 <td width="683" align="center"></td>
-<p class="valikko"><a href="index.php">Koti</a> | <a href="manifestointi.html">Manifestointi</a> | <a href="mentorointi.html">Mentorointi</a> | <a href="kurssit.html">Kurssit</a> | <a href="tuotteet.html">Tuotteet</a> | <a href="ajankohtaista.html">Ajankohtaista</a> |
-			 <a href="taustaa.html">Taustaa</a> | <a href="http://omanelamaniluoja.fi/blogi">Blogi</a> | <a href="yhteystiedot.html">Yhteystiedot</a> | <a href="http://facebook.com/omanelamaniluoja" target="_blank">Fb</a></p>
+<p class="valikko"><a href="index.php">Koti</a> | <a href="http://localhost/omanelamaniluoja/index.php?app=manifest">Manifestointi</a> | <a href="mentorointi.html">Mentorointi</a> | <a href="kurssit.html">Kurssit</a> | <a href="tuotteet.html">Tuotteet</a> | <a href="ajankohtaista.html">Ajankohtaista</a> |
+			 <a href="taustaa.html">Taustaa</a> | <a href="http://omanelamaniluoja.fi/blogi">Blogi</a> | <a href="yhteystiedot.html">Yhteystiedot</a> | <a href="http://facebook.com/omanelamaniluoja" Facebook</a></p>
 <br style="clear:left"/>
 </tr>
 </table>

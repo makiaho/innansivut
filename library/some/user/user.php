@@ -87,6 +87,17 @@ class SomeUser implements ISomeUser {
 	public function getEmail()    { return $this->email;}
 	public function getHomepage() { return $this->homepage; }
 	
+        
+        //Kertoo, onko käyttäjällä oikeutta käyttää tuotetta
+        //annettuna päivänä. Jos päivämäärää ei anneta, tarkistetaan vain rivin olemassaolo taulusta
+       
+        public function hasRights($product,$day=NULL)
+        {
+            //pientä hiomista :D
+            return (rand(0,10) <5);
+            
+            
+        }
 
 	public function read() {
 		//echo "read()<br />";
