@@ -55,4 +55,4 @@ if (SomeFactory::getUser()->getId() > 0) {
 <br><br><br><br><br>
 <?php 
 }
-?>
+    ?>

@@ -52,10 +52,10 @@ class SomeControllerDefault extends SomeController {
 	public function register() {
        //nimeämiskäytäntö! model/register.php and SomeModelRegister must exist.
        $model = $this->getModel('register');
-       $username = SomeRequest::getVar('username',null);
+       $username = SomeRequest::getVar('email',null);
        //jos username on olemassa, käyttäjältä tulee lomake, yritä käsitellä se
        if ($username) {
-         $success = $model->dotask(); // paluuarvo voi kertoa onnistumisesta tai epäonnistumisesta.
+         $success = $model->dotask(); //  paluuarvo voi kertoa onnistumisesta tai epäonnistumisesta.
          if ($success) {
            $view = $this->getView('register'); // eli view/register/register.php pitää löytyä
            $view->setModel($model);

@@ -14,6 +14,11 @@ $userdata = $this->userdata;
 			</td></tr>
 			</table>
 <h1>Tervetuloa <?php echo SomeFactory::getUser()->getUsername() ?>!</h1>
+
+
+
+
+
 <table align="center" border="0" cellpadding="0" cellspacing="0" width="683">
 				<tbody>
 					<tr>

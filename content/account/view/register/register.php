@@ -19,11 +19,11 @@ class SomeViewRegister extends SomeView {
 		$this->userdata = $model->getUserdata();
 		$this->errors = $model->getErrors();
 		//for the form, unset those values that have no errors. We will not put those to form again.
-		foreach ($this->errors as $k => $estr) {
+		/*TODO miksei oikeita arvoja jätetä? foreach ($this->errors as $k => $estr) {
 		    if (isset($this->userdata[$k])) {
 		        unset($this->userdata[$k]);
-		    }
-		}
+		    } 
+		} */
 		
 		//must call parent display with $tmpl
 		parent::display($tmpl);

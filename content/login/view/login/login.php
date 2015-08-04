@@ -16,6 +16,7 @@ class SomeViewLogin extends SomeView {
 		# set values here to this, example $this->date = date('d.m.Y H:i:s');
 		#
 		$this->date = date('d.m.Y H:i:s');
+                $this->date2 = date('d.m.Y H:i:s');
 		$this->userdata = $model->getUserdata();
 		$this->errors = $model->getErrors();
 		//must call parent display with $tmpl

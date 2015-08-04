@@ -67,7 +67,16 @@ interface ISomeUser {
 	public function setUserrole($ur);
 	public function setEmail($email);
 	public function setHomepage($hp);
-	
+        
+        public function setFirstName($fn);
+        public function setLastName($ln);
+        public function setStreetAddress($sa);
+        public function setZipCode($zc);
+        public function setCity($c);
+        public function setCountry($c);
+        public function setPhoneNumber($ph);
+        public function setDateOfBirth($d);
+        
 	public function getId();
 	public function getUsername();
 	public function getPassword();
@@ -75,7 +84,15 @@ interface ISomeUser {
 	public function getEmail();
 	public function getHomepage();
 	
-
+        public function getFirstName();
+        public function getLastName();
+        public function getStreetAddress();
+        public function getZipCode();
+        public function getCity();
+        public function getCountry();
+        public function getPhoneNumber();
+        public function getDateOfBirth();
+        
 	public function read();
 	
 	public function create();

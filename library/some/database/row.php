@@ -87,17 +87,19 @@ class SomeRow implements ISomeRow {
         );
 		ob_start();
 		print_r($columns);
-		$this->columnsdebug = ob_get_clean();
+		#$this->columnsdebug = ob_get_clean();
 		
         $id = $database->lastInsertId("{$table}_id_seq");
-       #$dberrs = $database->errorInfo();
-		#	var_dump($this->sql,$columns, $id,$dberrs); exit;
-	   /*
+        
+        //TODODEBUG. tarkempi virhe täältä?
+    
+        //debug 	  
 	   if (!$id) {
 			$dberrs = $database->errorInfo();
-			var_dump($dberrs); exit;
+                        var_dump($this->sql,$columns, $id,$dberrs); 
+			var_dump($dberrs); 
 			throw new SomeDatabaseException( $dberrs[2]);
-		}*/
+		}
 		$this->$key = $id;
         //debug
         return $id;

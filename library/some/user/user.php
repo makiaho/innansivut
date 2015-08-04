@@ -68,6 +68,18 @@ class SomeUser implements ISomeUser {
 	public $userrole;
 	public $email;
 	public $homepage;
+        
+        public $firstname;
+        public $lastname;
+        public $streetaddress;
+        public $zipcode;
+        public $city;
+        public $country;
+        public $phonenumber;
+        public $dateofbirth;
+  
+        
+        
 
 	public function __construct() {
 	
@@ -79,6 +91,19 @@ class SomeUser implements ISomeUser {
 	public function setUserrole($ur) { $this->userrole = $ur;}
 	public function setEmail($email) { $this->email = $email;}
 	public function setHomepage($hp) { $this->homepage = $hp;}
+        
+        public function setFirstName($fn){ $this->firstname = $fn;}
+        public function setLastName($ln){ $this->lastname = $ln;}
+        public function setStreetAddress($sa){ $this->streetaddress = $sa;}
+        public function setZipCode($zc){ $this->zipcode = $zc;}
+        public function setCity($c){ $this->city = $c;}
+        public function setCountry($c){ $this->country = $c;}
+        public function setPhoneNumber($ph){ $this->phonenumber = $ph;}
+        public function setDateOfBirth($d){ $this->dateofbirth = $d;}
+        
+        
+        
+        
 	
 	public function getId()    { return $this->id;}
 	public function getUsername() { return $this->username;}
@@ -87,6 +112,20 @@ class SomeUser implements ISomeUser {
 	public function getEmail()    { return $this->email;}
 	public function getHomepage() { return $this->homepage; }
 	
+        public function getFirstName(){ return $this->firstname;}
+        public function getLastName(){ return $this->lastname;}
+        public function getStreetAddress(){ return $this->streetaddress;}
+        public function getZipCode(){ return $this->zipcode;}
+        public function getCity(){ return $this->city;}
+        public function getCountry(){ return $this->country;}
+        public function getPhoneNumber(){ return $this->phonenumber;}
+        public function getDateOfBirth(){ return $this->dateofbirth;}
+        
+        
+        
+        
+        
+        
         
         //Kertoo, onko käyttäjällä oikeutta käyttää tuotetta
         //annettuna päivänä. Jos päivämäärää ei anneta, tarkistetaan vain rivin olemassaolo taulusta
@@ -125,7 +164,31 @@ class SomeUser implements ISomeUser {
 		$userrow->password = $this->password;
 		$userrow->userrole = $this->userrole;
 		$userrow->email = $this->email;
-		$userrow->homepage = $this->homepage;
+		$userrow->homepage = $this->homepage; 
+                
+                $userrow->firstname = $this->firstname; 
+                $userrow->lastname = $this->lastname; 
+                $userrow->streetaddress = $this->streetaddress; 
+                $userrow->zipcode = $this->zipcode; 
+                $userrow->city = $this->city; 
+                $userrow->country = $this->country; 
+                $userrow-> phonenumber= $this->phonenumber; 
+                $userrow-> dateofbirth= $this->dateofbirth;
+                
+                 
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
 		
 		$ok =$userrow->create();
 		if (!$ok) {
@@ -147,6 +210,15 @@ class SomeUser implements ISomeUser {
 		$userrow->userrole = $this->userrole;
 		$userrow->email    = $this->email;
 		$userrow->homepage = $this->homepage;
+                
+                 $userrow->firstname = $this->firstname; 
+                $userrow->lastname = $this->lastnamee; 
+                $userrow->streetaddress = $this->streetaddress; 
+                $userrow->zipcode = $this->zipcode; 
+                $userrow->city = $this->city; 
+                $userrow->country = $this->country; 
+                $userrow-> phonenumber= $this->phonenumber; 
+                $userrow-> dateofbirth= $this->dateofbirth;
 		
 		$ok = $userrow->update();
 		if (!$ok) {

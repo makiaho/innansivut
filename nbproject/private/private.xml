@@ -7,33 +7,38 @@
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/example/example.php</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/manifest/model/FullVersion.php</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/account/view/register/index.html</file>
-            <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/account/view/register/tmpl/index.html</file>
+            <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/avatar/controller.php</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/library/some/user/user.php</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/manifest/view/index.html</file>
+            <file>file:/C:/xampp/htdocs/omanelamaniluoja/interface/library/some/user/iuser.php</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/crud/controller/crudlist.php</file>
+            <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/account/view/userlist/tmpl/default.php</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/manifest/view/fullVersion/tmpl/long.php</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/account/view/register/tmpl/succesful.php</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/manifest/view/noRights/tmpl/NoRightsObsoleteExample.php</file>
-            <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/account/model/roletest.php</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/template/default/index.html</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/account/model/test.php</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/manifest/model/NoRights.php</file>
+            <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/configuration/model/install_postgres.php</file>
+            <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/login/view/login/login.php</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/configuration/model/info.php</file>
-            <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/account/view/register/register.php</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/manifest/view/fullVersion/FullVersion.php</file>
-            <file>file:/C:/xampp/htdocs/omanelamaniluoja/template/default/index.php</file>
+            <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/login/view/login/tmpl/succesful.php</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/index.php</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/manifest/controller/default.php</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/example/controller/default.php</file>
+            <file>file:/C:/xampp/htdocs/omanelamaniluoja/library/some/application/application.php</file>
+            <file>file:/C:/xampp/htdocs/omanelamaniluoja/error.log</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/manifest/view/fullVersion/tmpl/FullVersion.php</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/manifest/view/noRights/NoRights.php</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/manifest/view/noRights/index.html</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/login/model/default.php</file>
+            <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/account/view/register/tmpl/default.php</file>
+            <file>file:/C:/xampp/htdocs/omanelamaniluoja/library/some/environment/request.php</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/hello/hello.php</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/manifest/manifest.php</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/manifest/view/noRights/tmpl/index.html</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/account/account.php</file>
-            <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/account/view/register/tmpl/form.php</file>
             <file>file:/C:/xampp/htdocs/omanelamaniluoja/content/manifest/view/fullVersion/tmpl/index.html</file>
         </group>
     </open-files>

@@ -1,4 +1,0 @@
-#ignore logs
-*.log
-error.log
-.gitignore

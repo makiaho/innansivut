@@ -105,7 +105,15 @@ class SomeRowUser extends SomeRow {
 	   'password',
 	   'userrole',
 	   'email',
-	   'homepage'
+            'firstname',
+            'lastname',
+            'streetaddress',
+            'zipcode',
+            'city',
+            'country',
+            'phonenumber',
+            'dateofbirth',
+       	   'homepage'
 	);
 	
 	public $id       = null;
@@ -114,6 +122,19 @@ class SomeRowUser extends SomeRow {
 	public $userrole = 'guest';
 	public $email    = null;
 	public $homepage = null;
+        
+            public $firstname  = null;
+            public $lastname  = null;
+            public $streetaddress  = null;
+            public $zipcode  = null;
+            public $city  = null;
+            public $country  = null;
+            public $phonenumber  = null;
+            public $dateofbirth  = null;
+        
+        
+     
+        
 	
 	public function __construct() {
 		parent::__construct();

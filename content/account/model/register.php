@@ -36,38 +36,69 @@ class SomeModelRegister extends SomeModel {
 	}
 	
 	public function validate() {
-	    $username  = SomeRequest::getVar('username' , '');
+	    
   	    $password  = SomeRequest::getVar('password' , '');
   	    $password2 = SomeRequest::getVar('password2', '');
-  	   	$email     = SomeRequest::getVar('email'    , '');
-  	   	$homepage  = SomeRequest::getVar('homepage' , '');
+  	    $email     = SomeRequest::getVar('email'    , '');
+            $email2     = SomeRequest::getVar('email2'    , '');
+  	    $firstname     = SomeRequest::getVar('firstname', '');
+            $lastname = SomeRequest::getVar('lastname', '');
+            $streetaddress = SomeRequest::getVar('streetaddress', '');
+            $zipcode = SomeRequest::getVar('zipcode', '');
+            $city = SomeRequest::getVar('city', '');
+            $country = SomeRequest::getVar('country', '');
+            $phonenumber = SomeRequest::getVar('phonenumber', '');
+            $dateofbirth = SomeRequest::getVar('dateofbirth', '');
+            
+            
   	   	// set errors to this->errors
   	   	// user form input fields name as $this->errors key:
   	   	//  $this->errors['username'] = "Username is not valid because...";
-	if (! preg_match('#^[a-z0-9_-]{3,24}$#i',$username) ) {
-  	   	    $this->errors['username'] = 'Not a valid Username';
-  	   	} else {
-  	   	    $this->userdata['username'] = $username;
-  	   	}
+                //TODO tee muutkin tarkistukset
+            
 		
   	   	if (! preg_match('#^.+$#i',$email) ) {
-  	   	    $this->errors['email'] = 'Not a valid Email address';
+  	   	    $this->errors['email'] = SomeText::_('SAHKOPOSTIOSOITEVAARAMUOTOINEN');
   	   	} else {
   	   	   $this->userdata['email'] = $email;
   	   	}
 		
-  	   	if (! preg_match('#^.+$#i',$homepage) ) {
-  	   	    $this->errors['homepage'] = 'Not a valid Homepage';
-  	   	} else {
-  	   	   $this->userdata['homepage'] = $homepage;
-  	   	}
+                if (!($email==$email2)) {
+  	   	    $this->errors['email2'] = SomeText::_('SAHKOPOSTIOSOITTEETEITASMAA');
+  	   	} ;
+  	   	
+  	   	
+                
 		
   	   	if (! preg_match('#^.{3,}$#i',$password) ) {
-  	   	    $this->errors['password'] = 'Not a valid Password';
+  	   	    $this->errors['password'] = SomeText::_('SALASANAVAARAMUOTOINEN');
   	   	} else {
   	   	   $this->userdata['password'] = $password;
   	   	}
-  	   	// if one or more error were added, then we must return boolean false
+                
+                if (!($password==$password2)) {
+  	   	    $this->errors['password2'] = SomeText::_('SALASANATEITASMAA');
+  	   	} else {
+  	   	   $this->userdata['password2'] = $password2;
+  	   	}
+                //TODO testi vielä
+                
+                 $this->userdata['email2'] = $email2;
+                $this->userdata['firstname'] = $firstname ;
+                $this->userdata['lastname'] = $lastname ;
+                $this->userdata['streetaddress'] = $streetaddress ;
+                $this->userdata['zipcode'] = $zipcode ;
+                $this->userdata['city'] = $city;
+                $this->userdata['country'] = $country;
+                $this->userdata['phonenumber'] = $phonenumber;
+                $this->userdata['dateofbirth'] = $dateofbirth;
+                
+                
+                
+                
+                
+                
+  	   	// if one or more errors were added, then we must return boolean false
   	   	return count($this->errors) == 0;
 	}
 	
@@ -78,16 +109,38 @@ class SomeModelRegister extends SomeModel {
 		someloader('some.user.user');
 	    $someuser = new SomeUser();
 	    $this->userdata = array(
-	    	'username'  => SomeRequest::getVar('username' , ''),
+	    	'username'  => SomeRequest::getVar('email' , ''),
   	    	'password'  => SomeRequest::getVar('password' , ''),
-  	    	'password' => SomeRequest::getVar('password2', ''),
-  	   		'email'     => SomeRequest::getVar('email'    , ''),
-  	   		'homepage'  => SomeRequest::getVar('homepage' , '')
+                
+                'firstname'  => SomeRequest::getVar('firstname' , ''),
+                'lastname'  => SomeRequest::getVar('lastname' , ''),
+                'streetaddress'  => SomeRequest::getVar('streetaddress' , ''),
+                'zipcode'  => SomeRequest::getVar('zipcode' , ''),
+                'city'  => SomeRequest::getVar('city' , ''),
+                'country'  => SomeRequest::getVar('country' , ''),
+                'dateofbirth'  => SomeRequest::getVar('dateofbirth' , ''),
+                'phonenumber'  => SomeRequest::getVar('phonenumber' , ''),
+                
+                
+  	    	'password2' => SomeRequest::getVar('password2', '')
+                
+                //TODODEBUG
+                
+                
+                //tähän sitten loput ?
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
 	    );
 	    
 	    $someuser->setUsername($this->userdata['username']);
-	    $someuser->setEmail($this->userdata['email']);
-	    $someuser->setHomepage($this->userdata['homepage']);
             $username=$this->userdata['username'];
             $passu=$this->userdata['password'];
             $salattupassu=md5($passu.$username.'blaa');
@@ -95,6 +148,24 @@ class SomeModelRegister extends SomeModel {
 	    $someuser->setUserrole('registered');
 	    $this->userdata['userrole'] = $someuser->getUserrole();
 	    
+            $someuser->setFirstName($this->userdata[firstname]);
+            $someuser->setLastName($this->userdata[lastname]);
+            $someuser->setStreetAddress($this->userdata[streetaddress]);
+            $someuser->setZipCode($this->userdata[zipcode]);
+            $someuser->setCity($this->userdata[city]);
+            $someuser->setPhoneNumber($this->userdata[phonenumber]);
+            $someuser->setCountry($this->userdata[country]);
+            $someuser->setDateOfBirth($this->userdata[dateofbirth]);
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
 	    $someuser->create();
         if ($someuser->getId() > 0) {
        	    $this->userdata['id'] = $someuser->getId();
