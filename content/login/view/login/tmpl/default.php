@@ -13,6 +13,11 @@ if (SomeFactory::getUser()->getId() > 0) {
 	?>
 	<a href="index.php?app=login&view=logout">Log Out <?php echo SomeFactory::getUser()->getUsername() ?></a>
 	<?php 
+        
+$user=  SomeFactory::getUser();
+$user->read();
+var_dump($user);
+
 	
 } else {
 
