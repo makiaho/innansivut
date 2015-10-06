@@ -1,4 +1,1 @@
-#ignore logs
-*.log
-error.log
-.gitignore
+/nbproject/private/
