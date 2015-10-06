@@ -17,13 +17,23 @@
     'session_table' => 'somesession',
   ),
   'database' => 
-  array (
+        
+array (
+      'isused' => '1',
+    'databasedriver' => 'pdomysql',
+    'databasehost' => 'omanelamaniluoja.fi',
+    'database' => 'omanelam_www2015',
+    'dbuser' => 'omanelam_www2015',
+    'dbpass' => 'omalama123',
+        
+        
+  /*array (
       'isused' => '1',
     'databasedriver' => 'pdomysql',
     'databasehost' => '127.0.0.1',
     'database' => 'www2015',
     'dbuser' => 'www2015',
-    'dbpass' => 'www2015',
+    'dbpass' => 'www2015',*/
   ),
   'debug' => 
   array (
