@@ -30,11 +30,14 @@ class SomeModelDefault extends SomeModel {
 	public function login() {
 		$username = SomeRequest::getVar('username',null);
 	    $password = SomeRequest::getVar('password',null);
+            
+             $salattupassu=md5($password.$username.'blaa');
+            
 	    $sql = "SELECT * FROM someuser WHERE username=? and password=?";
 	    $database = SomeFactory::getDBO();
 	    $stmt = $database->prepare($sql);
 	    $ok = $stmt->execute(
-	        array($username,$password)
+	        array($username,$salattupassu)
 	    );
 	    if ($ok) {
 	        $row = $stmt->fetch();
