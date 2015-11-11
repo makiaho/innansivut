@@ -1,4 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <!-- Vas. yläreunasta pois turhaa tekstiä ja linkkejä (log out, kielen valinta)-->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
@@ -57,22 +58,11 @@ table.sitemaptable th, table.sitemaptable td {
          <!-- Begin Header -->
          <div id="header">
 		 
-		       Logout ja kielen valinta jonnekin muualle	<br />
+		       	<br />
                        
-                       <?php
-                       $user = SomeFactory::getUser();
-                       if ($user->userrole != 'guest') {
-                       echo "<div>User: $user->username (<a href='?app=login&view=logout'>logout</a>)</div>";
-                           
-                       } else {
-                           echo "<a href='?app=login'>login</a>";
-                       }
                        
-                       ?>
                        &nbsp;&nbsp;&nbsp;
-                       <a href="?language=fi_FI">fi_FI</a>
-                        &nbsp;
-                       <a href="?language=en_GB">en_GB</a> 
+                        
 		 </div>
 		 <!-- End Header -->
 		 
@@ -83,8 +73,8 @@ table.sitemaptable th, table.sitemaptable td {
 <table align="center">
 <tr>
 <td width="683" align="center"></td>
-<p class="valikko"><a href="index.php">Koti</a> | <a href="http://localhost/omanelamaniluoja/index.php?app=manifest">Manifestointi</a> | <a href="mentorointi.html">Mentorointi</a> | <a href="kurssit.html">Kurssit</a> | <a href="tuotteet.html">Tuotteet</a> | <a href="ajankohtaista.html">Ajankohtaista</a> |
-			 <a href="taustaa.html">Taustaa</a> | <a href="http://omanelamaniluoja.fi/blogi">Blogi</a> | <a href="yhteystiedot.html">Yhteystiedot</a> | <a href="http://facebook.com/omanelamaniluoja" Facebook</a></p>
+<p class="valikko"><a href="index.php">Koti</a> | <a href="tuotteet.html">Tuotteet</a> | 
+			 <a href="taustaa.html">Taustaa</a> | <a href="http://omanelamaniluoja.fi/blogi">Blogi</a> | <a href="yhteystiedot.html">Yhteystiedot</a> </p>
 <br style="clear:left"/>
 </tr>
 </table>
@@ -110,7 +100,12 @@ table.sitemaptable th, table.sitemaptable td {
 		 
 		       <!-- Begin Right Column -->
 		       <div id="rightcolumn">
-		       
+		       <table>
+<tr>
+<td width="450"> <a href="?app=login"><u>Kirjaudu sis&auml;&auml;n</u></a>  <a href="?app=account&action=register"><u>Rekister&ouml;idy</u></a></td>
+<td><p class="lomake"></p></td>
+</tr>
+</table>
 	                 <some:content />
 		       
 			   <div class="clear"></div>

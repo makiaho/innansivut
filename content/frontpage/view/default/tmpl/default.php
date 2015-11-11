@@ -57,13 +57,7 @@
 		
 		<tr>
 			<td align="left" class="sisalto" height="800" valign="top" width="683">
-			<table width="683">
-			<tr>
-			<td width="450">
-			</td>
-			<td width="233"><p class="lomake"><a href="?app=login"><u>Kirjaudu sis&auml;&auml;n</u></a> <a href="?app=account&action=register"><u>Rekister&ouml;idy</u></a></p>
-			</td></tr>
-			</table>
+			
 			<h6>Luo el&auml;m&auml;&auml;si tietoisesti, syvimmist&auml; toiveistasi k&auml;sin</h6>
 			
 			<p class="laatikko4">
